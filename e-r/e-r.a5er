@@ -1,0 +1,774 @@
+﻿# A5:ER FORMAT:19
+# A5:ER ENCODING:UTF8
+# A5:ER Mk-1 Copyright © 2007 m.matsubara
+# A5:SQL Mk-2 Version 2.20.4 Copyright © 1997 - 2025 m.matsubara
+#  https://a5m2.mmatsubara.com
+
+[Manager]
+ProjectName=
+Author=
+MaxEntityRowShow=1000
+ReadOnlyRecommend=0
+Page=Main
+PageInfo="Main",2,"A3Landscape",$FFFFFF
+LogicalView=1
+DecodeDomain=0
+ViewModePageIndividually=1
+ViewMode=2
+ViewFormat=0
+UseNondependenceDashLine=0
+FontName=Tahoma
+FontSize=6
+PaperSize=A4Landscape
+HeaderLeft=
+HeaderCenter=
+HeaderRight=
+FooterLeft=
+FooterCenter=
+FooterRight=
+ShowPageoutRelation=1
+DefaultPkName=%0:s_PKC
+DefaultPkIndexName=%0:s_PKI
+DefaultIndexName=%0:s_IX%1:d
+DefaultFkName=%0:s_FK%1:d
+SqlSeparator=0
+UpperCaseKeyword=0
+ShowTag=1
+ShowCommonAttributes=0
+BugFixEntityWidth=1
+
+[Entity]
+PName=class_subjects
+LName=class_subjects
+Comment=
+TableInnerOption=
+TableOption=
+Page=MAIN
+Left=50
+Top=50
+Field="id","id","int auto_increment","NOT NULL",0,"","",$FFFFFFFF,""
+Field="class_id","class_id","int","NOT NULL",,"","",$FFFFFFFF,""
+Field="subject_id","subject_id","int","NOT NULL",,"","",$FFFFFFFF,""
+Field="manager_id","manager_id","int","NOT NULL",,"","",$FFFFFFFF,""
+Field="created_at","created_at","datetime","NOT NULL",,"CURRENT_TIMESTAMP","",$FFFFFFFF,""
+Field="updated_at","updated_at","datetime","NOT NULL",,"CURRENT_TIMESTAMP","",$FFFFFFFF,""
+Index=manager_id=0,manager_id
+Index=class_id=0,class_id
+Index=subject_id=0,subject_id
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+Position="MAIN",50,50
+ZOrder=-1
+
+[Entity]
+PName=majors
+LName=majors
+Comment=
+TableInnerOption=
+TableOption=
+Page=MAIN
+Left=550
+Top=250
+Field="id","id","int auto_increment","NOT NULL",0,"","",$FFFFFFFF,""
+Field="name","name","varchar(30)","NOT NULL",,"","",$FFFFFFFF,""
+Field="kana","kana","varchar(50)","NOT NULL",,"","",$FFFFFFFF,""
+Field="manager_id","manager_id","int","NOT NULL",,"","",$FFFFFFFF,""
+Field="created_at","created_at","datetime","NOT NULL",,"CURRENT_TIMESTAMP","",$FFFFFFFF,""
+Field="updated_at","updated_at","datetime","NOT NULL",,"CURRENT_TIMESTAMP","",$FFFFFFFF,""
+Index=name=2,name
+Index=manager_id=0,manager_id
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+Position="MAIN",550,250
+ZOrder=-3
+
+[Entity]
+PName=classes
+LName=classes
+Comment=
+TableInnerOption=
+TableOption=
+Page=MAIN
+Left=100
+Top=550
+Field="id","id","int auto_increment","NOT NULL",0,"","",$FFFFFFFF,""
+Field="start_year","start_year","int","NOT NULL",,"","",$FFFFFFFF,""
+Field="major_id","major_id","int","NOT NULL",,"","",$FFFFFFFF,""
+Field="manager_id","manager_id","int","NOT NULL",,"","",$FFFFFFFF,""
+Field="created_at","created_at","datetime","NOT NULL",,"CURRENT_TIMESTAMP","",$FFFFFFFF,""
+Field="updated_at","updated_at","datetime","NOT NULL",,"CURRENT_TIMESTAMP","",$FFFFFFFF,""
+Index=manager_id=0,manager_id
+Index=major_id=0,major_id
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+Position="MAIN",100,550
+ZOrder=-2
+
+[Entity]
+PName=scores
+LName=scores
+Comment=
+TableInnerOption=
+TableOption=
+Page=MAIN
+Left=1250
+Top=1000
+Field="id","id","int auto_increment","NOT NULL",0,"","",$FFFFFFFF,""
+Field="class_id","class_id","int","NOT NULL",,"","",$FFFFFFFF,""
+Field="subject_id","subject_id","int","NOT NULL",,"","",$FFFFFFFF,""
+Field="period_id","period_id","int","NOT NULL",,"","",$FFFFFFFF,""
+Field="teacher_id","teacher_id","int","NOT NULL",,"","",$FFFFFFFF,""
+Field="student_id","student_id","int","NOT NULL",,"","",$FFFFFFFF,""
+Field="score","score","int","NOT NULL",,"","",$FFFFFFFF,""
+Field="created_at","created_at","datetime","NOT NULL",,"CURRENT_TIMESTAMP","",$FFFFFFFF,""
+Field="updated_at","updated_at","datetime","NOT NULL",,"CURRENT_TIMESTAMP","",$FFFFFFFF,""
+Index=class_id=0,class_id
+Index=subject_id=0,subject_id
+Index=period_id=0,period_id
+Index=teacher_id=0,teacher_id
+Index=student_id=0,student_id
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+Position="MAIN",1250,1000
+ZOrder=-6
+
+[Entity]
+PName=periods
+LName=periods
+Comment=
+TableInnerOption=
+TableOption=
+Page=MAIN
+Left=850
+Top=50
+Field="id","id","int auto_increment","NOT NULL",0,"","",$FFFFFFFF,""
+Field="year","year","int","NOT NULL",,"","",$FFFFFFFF,""
+Field="name","name","varchar(10)","NOT NULL",,"","",$FFFFFFFF,""
+Field="manager_id","manager_id","int","NOT NULL",,"","",$FFFFFFFF,""
+Field="created_at","created_at","datetime","NOT NULL",,"CURRENT_TIMESTAMP","",$FFFFFFFF,""
+Field="updated_at","updated_at","datetime","NOT NULL",,"CURRENT_TIMESTAMP","",$FFFFFFFF,""
+Index=manager_id=0,manager_id
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+Position="MAIN",850,50
+ZOrder=-5
+
+[Entity]
+PName=managers
+LName=managers
+Comment=
+TableInnerOption=
+TableOption=
+Page=MAIN
+Left=700
+Top=1800
+Field="id","id","int auto_increment","NOT NULL",0,"","",$FFFFFFFF,""
+Field="name","name","varchar(30)","NOT NULL",,"","",$FFFFFFFF,""
+Field="kana","kana","varchar(50)","NOT NULL",,"","",$FFFFFFFF,""
+Field="email","email","varchar(255)","NOT NULL",,"","",$FFFFFFFF,""
+Field="pass","pass","varchar(70)","NOT NULL",,"","",$FFFFFFFF,""
+Field="created_at","created_at","datetime","NOT NULL",,"CURRENT_TIMESTAMP","",$FFFFFFFF,""
+Field="updated_at","updated_at","datetime","NOT NULL",,"CURRENT_TIMESTAMP","",$FFFFFFFF,""
+Field="gender","gender","varchar(10)","NOT NULL",,"","",$FFFFFFFF,""
+Index=name=2,name
+Index=email=2,email
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+Position="MAIN",700,1800
+ZOrder=-4
+
+[Entity]
+PName=subjects
+LName=subjects
+Comment=
+TableInnerOption=
+TableOption=
+Page=MAIN
+Left=2900
+Top=550
+Field="id","id","int auto_increment","NOT NULL",0,"","",$FFFFFFFF,""
+Field="name","name","varchar(30)","NOT NULL",,"","",$FFFFFFFF,""
+Field="kana","kana","varchar(50)","NOT NULL",,"","",$FFFFFFFF,""
+Field="manager_id","manager_id","int","NOT NULL",,"","",$FFFFFFFF,""
+Field="created_at","created_at","datetime","NOT NULL",,"CURRENT_TIMESTAMP","",$FFFFFFFF,""
+Field="updated_at","updated_at","datetime","NOT NULL",,"CURRENT_TIMESTAMP","",$FFFFFFFF,""
+Index=name=2,name
+Index=manager_id=0,manager_id
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+Position="MAIN",2900,550,183,152
+ZOrder=-8
+
+[Entity]
+PName=students
+LName=students
+Comment=
+TableInnerOption=
+TableOption=
+Page=MAIN
+Left=2400
+Top=1350
+Field="id","id","int auto_increment","NOT NULL",0,"","",$FFFFFFFF,""
+Field="name","name","varchar(30)","NOT NULL",,"","",$FFFFFFFF,""
+Field="kana","kana","varchar(50)","NOT NULL",,"","",$FFFFFFFF,""
+Field="gender","gender","varchar(10)","NOT NULL",,"","",$FFFFFFFF,""
+Field="email","email","varchar(255)","NOT NULL",,"","",$FFFFFFFF,""
+Field="pass","pass","varchar(70)","NOT NULL",,"","",$FFFFFFFF,""
+Field="class_id","class_id","int","NOT NULL",,"","",$FFFFFFFF,""
+Field="manager_id","manager_id","int","NOT NULL",,"","",$FFFFFFFF,""
+Field="created_at","created_at","datetime","NOT NULL",,"CURRENT_TIMESTAMP","",$FFFFFFFF,""
+Field="updated_at","updated_at","datetime","NOT NULL",,"CURRENT_TIMESTAMP","",$FFFFFFFF,""
+Index=name=2,name
+Index=email=2,email
+Index=manager_id=0,manager_id
+Index=class_id=0,class_id
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+Position="MAIN",2400,1350
+ZOrder=-7
+
+[Entity]
+PName=teachers
+LName=teachers
+Comment=
+TableInnerOption=
+TableOption=
+Page=MAIN
+Left=3400
+Top=150
+Field="id","id","int auto_increment","NOT NULL",0,"","",$FFFFFFFF,""
+Field="name","name","varchar(30)","NOT NULL",,"","",$FFFFFFFF,""
+Field="kana","kana","varchar(50)","NOT NULL",,"","",$FFFFFFFF,""
+Field="email","email","varchar(255)","NOT NULL",,"","",$FFFFFFFF,""
+Field="pass","pass","varchar(70)","NOT NULL",,"","",$FFFFFFFF,""
+Field="manager_id","manager_id","int","NOT NULL",,"","",$FFFFFFFF,""
+Field="created_at","created_at","datetime","NOT NULL",,"CURRENT_TIMESTAMP","",$FFFFFFFF,""
+Field="updated_at","updated_at","datetime","NOT NULL",,"CURRENT_TIMESTAMP","",$FFFFFFFF,""
+Field="gender","gender","varchar(10)","NOT NULL",,"","",$FFFFFFFF,""
+Index=name=2,name
+Index=email=2,email
+Index=manager_id=0,manager_id
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+Position="MAIN",3400,150
+ZOrder=-10
+
+[Entity]
+PName=teacher_subjects
+LName=teacher_subjects
+Comment=
+TableInnerOption=
+TableOption=
+Page=MAIN
+Left=1400
+Top=400
+Field="id","id","int auto_increment","NOT NULL",0,"","",$FFFFFFFF,""
+Field="class_id","class_id","int","NOT NULL",,"","",$FFFFFFFF,""
+Field="subject_id","subject_id","int","NOT NULL",,"","",$FFFFFFFF,""
+Field="manager_id","manager_id","int","NOT NULL",,"","",$FFFFFFFF,""
+Field="period_id","period_id","int","NOT NULL",,"","",$FFFFFFFF,""
+Field="teacher_id","teacher_id","int","NOT NULL",,"","",$FFFFFFFF,""
+Field="created_at","created_at","datetime","NOT NULL",,"CURRENT_TIMESTAMP","",$FFFFFFFF,""
+Field="updated_at","updated_at","datetime","NOT NULL",,"CURRENT_TIMESTAMP","",$FFFFFFFF,""
+Index=manager_id=0,manager_id
+Index=class_id=0,class_id
+Index=subject_id=0,subject_id
+Index=period_id=0,period_id
+Index=teacher_id=0,teacher_id
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+Position="MAIN",1400,400
+ZOrder=-9
+
+[Relation]
+Entity1=managers
+Entity2=subjects
+RelationType1=2
+RelationType2=3
+Fields1=id
+Fields2=manager_id
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,3952,8800,7429,R,R,""
+Dependence=0
+Caption=
+PName=
+LineColor=$00800080
+ModifiedDateTime=20251207210646
+LineMode=0
+Bar1=395
+Bar2=880
+Bar3=743
+TermPos1=R
+TermPos2=R
+ZOrder=-25
+
+[Relation]
+Entity1=managers
+Entity2=teacher_subjects
+RelationType1=2
+RelationType2=3
+Fields1=id
+Fields2=manager_id
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,9800,1700,8100,R,R,""
+Dependence=0
+Caption=
+PName=
+LineColor=$00800080
+ModifiedDateTime=20251207210658
+LineMode=0
+Bar1=980
+Bar2=170
+Bar3=810
+TermPos1=R
+TermPos2=R
+ZOrder=-26
+
+[Relation]
+Entity1=classes
+Entity2=students
+RelationType1=2
+RelationType2=3
+Fields1=id
+Fields2=class_id
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,7600,9200,1573,R,R,""
+Dependence=0
+Caption=
+PName=
+LineColor=$00008000
+ModifiedDateTime=20251207210937
+LineMode=0
+Bar1=760
+Bar2=920
+Bar3=157
+TermPos1=R
+TermPos2=R
+ZOrder=-24
+
+[Relation]
+Entity1=managers
+Entity2=students
+RelationType1=2
+RelationType2=3
+Fields1=id
+Fields2=manager_id
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,7200,9400,4400,R,R,""
+Dependence=0
+Caption=
+PName=
+LineColor=$00800080
+ModifiedDateTime=20251207210653
+LineMode=0
+Bar1=720
+Bar2=940
+Bar3=440
+TermPos1=R
+TermPos2=R
+ZOrder=-23
+
+[Relation]
+Entity1=students
+Entity2=scores
+RelationType1=2
+RelationType2=3
+Fields1=id
+Fields2=student_id
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,9073,4800,6101,R,R,""
+Dependence=0
+Caption=
+PName=
+LineColor=$00808000
+ModifiedDateTime=20251207211100
+LineMode=0
+Bar1=907
+Bar2=480
+Bar3=610
+TermPos1=R
+TermPos2=R
+ZOrder=-22
+
+[Relation]
+Entity1=managers
+Entity2=teachers
+RelationType1=2
+RelationType2=3
+Fields1=id
+Fields2=manager_id
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,1100,1080,3778,R,R,""
+Dependence=0
+Caption=
+PName=
+LineColor=$00800080
+ModifiedDateTime=20251207210650
+LineMode=0
+Bar1=110
+Bar2=108
+Bar3=378
+TermPos1=R
+TermPos2=R
+ZOrder=-31
+
+[Relation]
+Entity1=teachers
+Entity2=teacher_subjects
+RelationType1=2
+RelationType2=3
+Fields1=id
+Fields2=teacher_id
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,769,9481,1476,R,R,""
+Dependence=0
+Caption=
+PName=
+LineColor=$00000080
+ModifiedDateTime=20251207211013
+LineMode=0
+Bar1=77
+Bar2=948
+Bar3=148
+TermPos1=R
+TermPos2=R
+ZOrder=-30
+
+[Relation]
+Entity1=periods
+Entity2=teacher_subjects
+RelationType1=2
+RelationType2=3
+Fields1=id
+Fields2=period_id
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,100,4200,9179,R,R,""
+Dependence=0
+Caption=
+PName=
+LineColor=$00008080
+ModifiedDateTime=20251207210844
+LineMode=0
+Bar1=10
+Bar2=420
+Bar3=918
+TermPos1=R
+TermPos2=R
+ZOrder=-29
+
+[Relation]
+Entity1=subjects
+Entity2=teacher_subjects
+RelationType1=2
+RelationType2=3
+Fields1=id
+Fields2=subject_id
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,1200,3200,4447,R,R,""
+Dependence=0
+Caption=
+PName=
+LineColor=$00808080
+ModifiedDateTime=20251207211029
+LineMode=0
+Bar1=120
+Bar2=320
+Bar3=445
+TermPos1=R
+TermPos2=R
+ZOrder=-28
+
+[Relation]
+Entity1=classes
+Entity2=teacher_subjects
+RelationType1=2
+RelationType2=3
+Fields1=id
+Fields2=class_id
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,1179,5600,4700,R,R,""
+Dependence=0
+Caption=
+PName=
+LineColor=$00008000
+ModifiedDateTime=20251207210909
+LineMode=0
+Bar1=118
+Bar2=560
+Bar3=470
+TermPos1=R
+TermPos2=R
+ZOrder=-27
+
+[Relation]
+Entity1=teachers
+Entity2=scores
+RelationType1=2
+RelationType2=3
+Fields1=id
+Fields2=teacher_id
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,2400,3200,1963,R,R,""
+Dependence=0
+Caption=
+PName=
+LineColor=$00000080
+ModifiedDateTime=20251207211003
+LineMode=0
+Bar1=240
+Bar2=320
+Bar3=196
+TermPos1=R
+TermPos2=R
+ZOrder=-21
+
+[Relation]
+Entity1=majors
+Entity2=classes
+RelationType1=2
+RelationType2=3
+Fields1=id
+Fields2=major_id
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,6400,4610,5809,R,R,""
+Dependence=0
+Caption=
+PName=
+LineColor=$00800000
+ModifiedDateTime=20251207210943
+LineMode=0
+Bar1=640
+Bar2=461
+Bar3=581
+TermPos1=R
+TermPos2=R
+ZOrder=-15
+
+[Relation]
+Entity1=managers
+Entity2=classes
+RelationType1=2
+RelationType2=3
+Fields1=id
+Fields2=manager_id
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,5353,9500,8670,R,R,""
+Dependence=0
+Caption=
+PName=
+LineColor=$00800080
+ModifiedDateTime=20251207210623
+LineMode=0
+Bar1=535
+Bar2=950
+Bar3=867
+TermPos1=R
+TermPos2=R
+ZOrder=-14
+
+[Relation]
+Entity1=subjects
+Entity2=class_subjects
+RelationType1=2
+RelationType2=3
+Fields1=id
+Fields2=subject_id
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,5346,2100,6094,R,R,""
+Dependence=0
+Caption=
+PName=
+LineColor=$00808080
+ModifiedDateTime=20251207211036
+LineMode=0
+Bar1=535
+Bar2=210
+Bar3=609
+TermPos1=R
+TermPos2=R
+ZOrder=-13
+
+[Relation]
+Entity1=classes
+Entity2=class_subjects
+RelationType1=2
+RelationType2=3
+Fields1=id
+Fields2=class_id
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,6500,4949,5780,R,R,""
+Dependence=0
+Caption=
+PName=
+LineColor=$00008000
+ModifiedDateTime=20251207210914
+LineMode=0
+Bar1=650
+Bar2=495
+Bar3=578
+TermPos1=R
+TermPos2=R
+ZOrder=-12
+
+[Relation]
+Entity1=managers
+Entity2=class_subjects
+RelationType1=2
+RelationType2=3
+Fields1=id
+Fields2=manager_id
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,3300,6100,500,R,R,""
+Dependence=0
+Caption=
+PName=
+LineColor=$00800080
+ModifiedDateTime=20251207210555
+LineMode=0
+Bar1=330
+Bar2=610
+Bar3=50
+TermPos1=R
+TermPos2=R
+ZOrder=-11
+
+[Relation]
+Entity1=periods
+Entity2=scores
+RelationType1=2
+RelationType2=3
+Fields1=id
+Fields2=period_id
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,9400,7900,142,R,R,""
+Dependence=0
+Caption=
+PName=
+LineColor=$00008080
+ModifiedDateTime=20251207210855
+LineMode=0
+Bar1=940
+Bar2=790
+Bar3=14
+TermPos1=R
+TermPos2=R
+ZOrder=-20
+
+[Relation]
+Entity1=subjects
+Entity2=scores
+RelationType1=2
+RelationType2=3
+Fields1=id
+Fields2=subject_id
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,9400,2200,9400,R,R,""
+Dependence=0
+Caption=
+PName=
+LineColor=$00808080
+ModifiedDateTime=20251207211041
+LineMode=0
+Bar1=940
+Bar2=220
+Bar3=940
+TermPos1=R
+TermPos2=R
+ZOrder=-19
+
+[Relation]
+Entity1=classes
+Entity2=scores
+RelationType1=2
+RelationType2=3
+Fields1=id
+Fields2=class_id
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,3610,1595,4095,R,R,""
+Dependence=0
+Caption=
+PName=
+LineColor=$00008000
+ModifiedDateTime=20251207210904
+LineMode=0
+Bar1=361
+Bar2=160
+Bar3=410
+TermPos1=R
+TermPos2=R
+ZOrder=-18
+
+[Relation]
+Entity1=managers
+Entity2=periods
+RelationType1=2
+RelationType2=3
+Fields1=id
+Fields2=manager_id
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,7087,6500,5549,R,R,""
+Dependence=0
+Caption=
+PName=
+LineColor=$00800080
+ModifiedDateTime=20251207210602
+LineMode=0
+Bar1=709
+Bar2=650
+Bar3=555
+TermPos1=R
+TermPos2=R
+ZOrder=-17
+
+[Relation]
+Entity1=managers
+Entity2=majors
+RelationType1=2
+RelationType2=3
+Fields1=id
+Fields2=manager_id
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,0,3663,3837,R,R,""
+Dependence=0
+Caption=
+PName=
+LineColor=$00800080
+ModifiedDateTime=20251207210642
+LineMode=0
+Bar1=0
+Bar2=366
+Bar3=384
+TermPos1=R
+TermPos2=R
+ZOrder=-16
