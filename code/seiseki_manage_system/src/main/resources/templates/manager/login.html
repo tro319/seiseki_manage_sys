@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>管理者ログイン画面 | 成績管理システム</title>
+</head>
+<body>
+	
+	<main>
+		
+		<div class="page-main-tops">
+			
+			<div class="sub-title">
+				
+				<h2>ログイン画面</h2>
+				
+			</div>		
+				
+					
+			<div class="sub-link">
+				
+<!--				<a th:href=""></a>-->
+				
+			</div>	
+				
+	
+		</div>
+		
+
+		
+		<div class="container">
+		
+			
+			<p class="err" th:text="${login_result}"></p>
+			
+			<form method="post" th:action="@{/manager/login}" class="form login-form" th:object="${manager_login_data}">
+				
+				
+				<div>
+					
+					<label for="email">メールアドレス:</label>
+						
+					<input type="email" th:field="*{email}" required />
+					
+				</div>
+				
+				<div>
+					
+					<label for="pass">パスワード:</label>
+					
+					<input type="password" th:field="*{pass}" required />
+					
+				</div>
+				
+				
+				
+			</form>
+			
+			
+		</div>
+		
+	</main>
+
+</body>
+</html>

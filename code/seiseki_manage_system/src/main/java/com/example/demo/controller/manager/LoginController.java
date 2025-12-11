@@ -2,7 +2,9 @@ package com.example.demo.controller.manager;
 
 import jakarta.servlet.http.HttpSession;
 
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.example.demo.model.entity.Manager;
@@ -37,6 +39,7 @@ public class LoginController {
 	 * 
 	 */
 	
+	@PostMapping("/manager/login")
 	public String login(HttpSession session, RedirectAttributes redirectAttributes, LoginForm form) {
 		
 		Integer loginId = (Integer)session.getAttribute("log_manager_id");
@@ -103,3 +106,4 @@ public class LoginController {
 	}
 	
 }
+
