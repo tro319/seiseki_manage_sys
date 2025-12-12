@@ -53,6 +53,7 @@ public class LoginController {
 		}
 		
 		
+		
 		// フォーム入力情報を、セッション値にセット
 		
 		session.setAttribute("manager_login_data", form);
@@ -78,6 +79,7 @@ public class LoginController {
 				session.setAttribute("log_manager_name", managerInfo.getName());
 				
 				session.removeAttribute("manager_login_data");
+			
 				
 				return "redirect:/manager/majors";
 				

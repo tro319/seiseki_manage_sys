@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>管理者ログイン画面 | 成績管理システム</title>
 </head>
-<body>
+<body th:attr="data-logout-result=${logout_result}">
 	
 	<main>
 		
@@ -53,6 +53,11 @@
 					
 				</div>
 				
+				<div class="submit-btns">
+					
+					<input type="submit" value="ログイン" />
+					
+				</div>
 				
 				
 			</form>
@@ -61,6 +66,14 @@
 		</div>
 		
 	</main>
+	
+	<script>
+		
+		const logoutResult = document.body.dataset.logoutResult;
+		
+		if (logoutResult) window.alert(logoutResult);
+		
+	</script>
 
 </body>
 </html>

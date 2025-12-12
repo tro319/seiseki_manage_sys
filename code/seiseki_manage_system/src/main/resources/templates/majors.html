@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>テスト画面 | 成績管理システム</title>
+</head>
+<body th:attr="data-logout-result=${logout_result}">
+	
+	<main>
+		
+		<div class="page-main-tops">
+			
+			<div class="sub-title">
+				
+				<h2>テスト画面</h2>
+				
+			</div>		
+				
+					
+			<div class="sub-link">
+				
+				<a th:href="@{/manager/logout}" onclick="return confirm('ログアウトしますか？');">ログアウト</a>
+				
+			</div>	
+				
+	
+		</div>
+		
+
+		
+	
+		
+	</main>
+	
+
+
+</body>
+</html>

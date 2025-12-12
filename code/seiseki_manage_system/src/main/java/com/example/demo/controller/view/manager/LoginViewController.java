@@ -75,6 +75,19 @@ public class LoginViewController {
 			
 		}
 		
+		
+		// ログアウト直後かどうか
+		
+		
+		String logoutResult = (String)session.getAttribute("logout_result");
+		
+		
+		if (logoutResult != null) {
+			
+			model.addAttribute("logout_result", logoutResult);
+			
+			
+		}
 
 		
 		
