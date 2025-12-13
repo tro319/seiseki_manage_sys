@@ -1,0 +1,202 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:145.0) Gecko/20100101 Firefox/145.0" version="29.2.7">
+  <diagram name="ページ1" id="mb2iSDPSAOiip58z1rqg">
+    <mxGraphModel grid="0" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="y_rmSiP4a9WrNTzO88O2-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=#6c8ebf;fillColor=#dae8fc;align=center;verticalAlign=middle;rounded=0;fontSize=36;" value="&lt;div&gt;&lt;span style=&quot;color: rgb(0, 161, 255);&quot;&gt;class&lt;/span&gt;&lt;/div&gt;&lt;div&gt;専攻情報サービス&amp;nbsp;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="149" width="471" x="39" y="41" as="geometry" />
+        </mxCell>
+        <mxCell id="S7X8e83eDEx1BtPf0ie4-10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;verticalAlign=top;fontSize=36;fontColor=#80708A;" value="&lt;font&gt;大域 field&lt;/font&gt;" vertex="1">
+          <mxGeometry height="246" width="963" x="1151" y="41" as="geometry" />
+        </mxCell>
+        <mxCell id="S7X8e83eDEx1BtPf0ie4-11" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="大域: MajorsRepository型: repository&amp;nbsp;" vertex="1">
+          <mxGeometry height="30" width="590" x="1268" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="5Vekih4Pkx-zNON3sUaO-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="大域: DozerBeanMapper型: mapper&amp;nbsp;" vertex="1">
+          <mxGeometry height="30" width="590" x="1270" y="129" as="geometry" />
+        </mxCell>
+        <mxCell id="5Vekih4Pkx-zNON3sUaO-9" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="813" width="1020" x="64" y="316" as="geometry" />
+        </mxCell>
+        <mxCell id="y_rmSiP4a9WrNTzO88O2-2" parent="5Vekih4Pkx-zNON3sUaO-9" style="text;html=1;whiteSpace=wrap;strokeColor=#6c8ebf;fillColor=light-dark(#daeece, #214210);align=center;verticalAlign=top;rounded=0;fontSize=36;fontColor=#00A1FF;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" value="&lt;div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;span style=&quot;color: rgb(50, 182, 49);&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;span&gt;method&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;span style=&quot;color: rgba(0, 0, 0, 0);&quot;&gt;&lt;span style=&quot;color: rgba(0, 0, 0, 0);&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="813" width="1020" as="geometry" />
+        </mxCell>
+        <mxCell id="y_rmSiP4a9WrNTzO88O2-14" parent="5Vekih4Pkx-zNON3sUaO-9" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="&lt;div&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font&gt;Major型: majorInfo ← repository.&lt;/font&gt;&lt;/span&gt;&lt;font&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font&gt;専攻名から&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;font&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font&gt;専攻&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;font&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font&gt;情報取得 (name).orElse( null )&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="590" x="238" y="233" as="geometry" />
+        </mxCell>
+        <mxCell id="y_rmSiP4a9WrNTzO88O2-20" parent="5Vekih4Pkx-zNON3sUaO-9" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;* annotation: @Service、@RequiredArgsConstructor&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;* 英字のメソッド呼び出しは、Java Spring 標準メソッド&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="590" x="238" y="733" as="geometry" />
+        </mxCell>
+        <mxCell id="ZfGfXsy4YiebRTj8fB6C-34" connectable="0" parent="5Vekih4Pkx-zNON3sUaO-9" style="group" value="" vertex="1">
+          <mxGeometry height="30" width="878" x="122" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="y_rmSiP4a9WrNTzO88O2-4" parent="ZfGfXsy4YiebRTj8fB6C-34" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=none;" value="&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;" vertex="1">
+          <mxGeometry height="20" width="20" y="5" as="geometry" />
+        </mxCell>
+        <mxCell id="y_rmSiP4a9WrNTzO88O2-9" parent="ZfGfXsy4YiebRTj8fB6C-34" style="whiteSpace=wrap;html=1;fillColor=none;labelBorderColor=none;strokeColor=none;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font&gt;&amp;nbsp;Major型: 専攻名から専攻情報取得 ( 文字列型: name )&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="565" x="26" as="geometry" />
+        </mxCell>
+        <mxCell id="S7X8e83eDEx1BtPf0ie4-2" parent="5Vekih4Pkx-zNON3sUaO-9" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="return majorInfo" vertex="1">
+          <mxGeometry height="30" width="590" x="238" y="256" as="geometry" />
+        </mxCell>
+        <mxCell id="5Vekih4Pkx-zNON3sUaO-10" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="813" width="1020" x="1300" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="5Vekih4Pkx-zNON3sUaO-11" parent="5Vekih4Pkx-zNON3sUaO-10" style="text;html=1;whiteSpace=wrap;strokeColor=#6c8ebf;fillColor=light-dark(#daeece, #214210);align=center;verticalAlign=top;rounded=0;fontSize=36;fontColor=#00A1FF;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" value="&lt;div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;span style=&quot;color: rgb(50, 182, 49);&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;span&gt;method&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;span style=&quot;color: rgba(0, 0, 0, 0);&quot;&gt;&lt;span style=&quot;color: rgba(0, 0, 0, 0);&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="813" width="1020" as="geometry" />
+        </mxCell>
+        <mxCell id="5Vekih4Pkx-zNON3sUaO-12" parent="5Vekih4Pkx-zNON3sUaO-10" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="List&amp;lt;Major&amp;gt; majors → repository.findAll()" vertex="1">
+          <mxGeometry height="30" width="590" x="238" y="233" as="geometry" />
+        </mxCell>
+        <mxCell id="5Vekih4Pkx-zNON3sUaO-13" parent="5Vekih4Pkx-zNON3sUaO-10" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;* annotation: @Service、@RequiredArgsConstructor&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;* 英字のメソッド呼び出しは、Java Spring 標準メソッド&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="590" x="238" y="733" as="geometry" />
+        </mxCell>
+        <mxCell id="5Vekih4Pkx-zNON3sUaO-14" connectable="0" parent="5Vekih4Pkx-zNON3sUaO-10" style="group" value="" vertex="1">
+          <mxGeometry height="30" width="878" x="122" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="5Vekih4Pkx-zNON3sUaO-15" parent="5Vekih4Pkx-zNON3sUaO-14" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=none;" value="&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;" vertex="1">
+          <mxGeometry height="20" width="20" y="5" as="geometry" />
+        </mxCell>
+        <mxCell id="5Vekih4Pkx-zNON3sUaO-16" parent="5Vekih4Pkx-zNON3sUaO-14" style="whiteSpace=wrap;html=1;fillColor=none;labelBorderColor=none;strokeColor=none;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font&gt;&amp;nbsp;List&amp;lt;Major&amp;gt;型: 専攻一覧情報取得 ( )&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="565" x="26" as="geometry" />
+        </mxCell>
+        <mxCell id="5Vekih4Pkx-zNON3sUaO-17" parent="5Vekih4Pkx-zNON3sUaO-10" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="return majors" vertex="1">
+          <mxGeometry height="30" width="590" x="238" y="256" as="geometry" />
+        </mxCell>
+        <mxCell id="5Vekih4Pkx-zNON3sUaO-18" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="813" width="1020" x="2460" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="5Vekih4Pkx-zNON3sUaO-19" parent="5Vekih4Pkx-zNON3sUaO-18" style="text;html=1;whiteSpace=wrap;strokeColor=#6c8ebf;fillColor=light-dark(#daeece, #214210);align=center;verticalAlign=top;rounded=0;fontSize=36;fontColor=#00A1FF;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" value="&lt;div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;span style=&quot;color: rgb(50, 182, 49);&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;span&gt;method&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;span style=&quot;color: rgba(0, 0, 0, 0);&quot;&gt;&lt;span style=&quot;color: rgba(0, 0, 0, 0);&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="813" width="1020" as="geometry" />
+        </mxCell>
+        <mxCell id="5Vekih4Pkx-zNON3sUaO-20" parent="5Vekih4Pkx-zNON3sUaO-18" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="&lt;div&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font&gt;Major型: majorInfo ← repository.&lt;/font&gt;&lt;/span&gt;&lt;font&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font&gt;&amp;nbsp;findById( id ).orElse( null )&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="590" x="238" y="233" as="geometry" />
+        </mxCell>
+        <mxCell id="5Vekih4Pkx-zNON3sUaO-21" parent="5Vekih4Pkx-zNON3sUaO-18" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;* annotation: @Service、@RequiredArgsConstructor&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;* 英字のメソッド呼び出しは、Java Spring 標準メソッド&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="590" x="238" y="733" as="geometry" />
+        </mxCell>
+        <mxCell id="5Vekih4Pkx-zNON3sUaO-22" connectable="0" parent="5Vekih4Pkx-zNON3sUaO-18" style="group" value="" vertex="1">
+          <mxGeometry height="30" width="878" x="122" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="5Vekih4Pkx-zNON3sUaO-23" parent="5Vekih4Pkx-zNON3sUaO-22" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=none;" value="&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;" vertex="1">
+          <mxGeometry height="20" width="20" y="5" as="geometry" />
+        </mxCell>
+        <mxCell id="5Vekih4Pkx-zNON3sUaO-24" parent="5Vekih4Pkx-zNON3sUaO-22" style="whiteSpace=wrap;html=1;fillColor=none;labelBorderColor=none;strokeColor=none;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font&gt;&amp;nbsp;Major型: idから専攻情報取得 ( 数値型: id )&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="565" x="26" as="geometry" />
+        </mxCell>
+        <mxCell id="5Vekih4Pkx-zNON3sUaO-25" parent="5Vekih4Pkx-zNON3sUaO-18" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="return majorInfo" vertex="1">
+          <mxGeometry height="30" width="590" x="238" y="256" as="geometry" />
+        </mxCell>
+        <mxCell id="5Vekih4Pkx-zNON3sUaO-27" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="813" width="1020" x="3570" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="5Vekih4Pkx-zNON3sUaO-28" parent="5Vekih4Pkx-zNON3sUaO-27" style="text;html=1;whiteSpace=wrap;strokeColor=#6c8ebf;fillColor=light-dark(#daeece, #214210);align=center;verticalAlign=top;rounded=0;fontSize=36;fontColor=#00A1FF;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" value="&lt;div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;span style=&quot;color: rgb(50, 182, 49);&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;span&gt;method&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;span style=&quot;color: rgba(0, 0, 0, 0);&quot;&gt;&lt;span style=&quot;color: rgba(0, 0, 0, 0);&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="813" width="1020" as="geometry" />
+        </mxCell>
+        <mxCell id="5Vekih4Pkx-zNON3sUaO-29" parent="5Vekih4Pkx-zNON3sUaO-27" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="repository.deleteById( id )" vertex="1">
+          <mxGeometry height="30" width="590" x="238" y="233" as="geometry" />
+        </mxCell>
+        <mxCell id="5Vekih4Pkx-zNON3sUaO-30" parent="5Vekih4Pkx-zNON3sUaO-27" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;* annotation: @Service、@RequiredArgsConstructor&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;* 英字のメソッド呼び出しは、Java Spring 標準メソッド&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="590" x="238" y="733" as="geometry" />
+        </mxCell>
+        <mxCell id="5Vekih4Pkx-zNON3sUaO-31" connectable="0" parent="5Vekih4Pkx-zNON3sUaO-27" style="group" value="" vertex="1">
+          <mxGeometry height="30" width="878" x="122" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="5Vekih4Pkx-zNON3sUaO-32" parent="5Vekih4Pkx-zNON3sUaO-31" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=none;" value="&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;" vertex="1">
+          <mxGeometry height="20" width="20" y="5" as="geometry" />
+        </mxCell>
+        <mxCell id="5Vekih4Pkx-zNON3sUaO-33" parent="5Vekih4Pkx-zNON3sUaO-31" style="whiteSpace=wrap;html=1;fillColor=none;labelBorderColor=none;strokeColor=none;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font&gt;&amp;nbsp;idから専攻情報削除 ( 数値型: id )&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="565" x="26" as="geometry" />
+        </mxCell>
+        <mxCell id="5Vekih4Pkx-zNON3sUaO-35" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="813" width="1020" x="4728" y="332" as="geometry" />
+        </mxCell>
+        <mxCell id="5Vekih4Pkx-zNON3sUaO-36" parent="5Vekih4Pkx-zNON3sUaO-35" style="text;html=1;whiteSpace=wrap;strokeColor=#6c8ebf;fillColor=light-dark(#daeece, #214210);align=center;verticalAlign=top;rounded=0;fontSize=36;fontColor=#00A1FF;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" value="&lt;div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;span style=&quot;color: rgb(50, 182, 49);&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;span&gt;method&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;span style=&quot;color: rgba(0, 0, 0, 0);&quot;&gt;&lt;span style=&quot;color: rgba(0, 0, 0, 0);&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="813" width="1020" as="geometry" />
+        </mxCell>
+        <mxCell id="5Vekih4Pkx-zNON3sUaO-37" parent="5Vekih4Pkx-zNON3sUaO-35" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="Major majorInfo ← mapper.map(form, Major.class)" vertex="1">
+          <mxGeometry height="30" width="590" x="238" y="233" as="geometry" />
+        </mxCell>
+        <mxCell id="5Vekih4Pkx-zNON3sUaO-38" parent="5Vekih4Pkx-zNON3sUaO-35" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;* annotation: @Service、@RequiredArgsConstructor&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;* 英字のメソッド呼び出しは、Java Spring 標準メソッド&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="590" x="238" y="733" as="geometry" />
+        </mxCell>
+        <mxCell id="5Vekih4Pkx-zNON3sUaO-39" connectable="0" parent="5Vekih4Pkx-zNON3sUaO-35" style="group" value="" vertex="1">
+          <mxGeometry height="30" width="878" x="122" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="5Vekih4Pkx-zNON3sUaO-40" parent="5Vekih4Pkx-zNON3sUaO-39" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=none;" value="&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;" vertex="1">
+          <mxGeometry height="20" width="20" y="5" as="geometry" />
+        </mxCell>
+        <mxCell id="5Vekih4Pkx-zNON3sUaO-41" parent="5Vekih4Pkx-zNON3sUaO-39" style="whiteSpace=wrap;html=1;fillColor=none;labelBorderColor=none;strokeColor=none;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font&gt;&amp;nbsp;Major型: 専攻情報登録 ( MajorRegisterForm型: form )&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="565" x="26" as="geometry" />
+        </mxCell>
+        <mxCell id="nFfxAoN4GDQDKGdOiMfe-1" parent="5Vekih4Pkx-zNON3sUaO-35" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="return repository.save(majorInfo)" vertex="1">
+          <mxGeometry height="30" width="590" x="238" y="263" as="geometry" />
+        </mxCell>
+        <mxCell id="5Vekih4Pkx-zNON3sUaO-42" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="813" width="1020" x="5825" y="331" as="geometry" />
+        </mxCell>
+        <mxCell id="5Vekih4Pkx-zNON3sUaO-43" parent="5Vekih4Pkx-zNON3sUaO-42" style="text;html=1;whiteSpace=wrap;strokeColor=#6c8ebf;fillColor=light-dark(#daeece, #214210);align=center;verticalAlign=top;rounded=0;fontSize=36;fontColor=#00A1FF;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" value="&lt;div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;span style=&quot;color: rgb(50, 182, 49);&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;span&gt;method&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;span style=&quot;color: rgba(0, 0, 0, 0);&quot;&gt;&lt;span style=&quot;color: rgba(0, 0, 0, 0);&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="813" width="1020" as="geometry" />
+        </mxCell>
+        <mxCell id="5Vekih4Pkx-zNON3sUaO-44" parent="5Vekih4Pkx-zNON3sUaO-42" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="return doubleCheck" vertex="1">
+          <mxGeometry height="30" width="590" x="248" y="268" as="geometry" />
+        </mxCell>
+        <mxCell id="5Vekih4Pkx-zNON3sUaO-45" parent="5Vekih4Pkx-zNON3sUaO-42" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;* annotation: @Service、@RequiredArgsConstructor&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;* 英字のメソッド呼び出しは、Java Spring 標準メソッド&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="590" x="238" y="733" as="geometry" />
+        </mxCell>
+        <mxCell id="5Vekih4Pkx-zNON3sUaO-46" connectable="0" parent="5Vekih4Pkx-zNON3sUaO-42" style="group" value="" vertex="1">
+          <mxGeometry height="30" width="878" x="122" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="5Vekih4Pkx-zNON3sUaO-47" parent="5Vekih4Pkx-zNON3sUaO-46" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=none;" value="&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;" vertex="1">
+          <mxGeometry height="20" width="20" y="5" as="geometry" />
+        </mxCell>
+        <mxCell id="5Vekih4Pkx-zNON3sUaO-48" parent="5Vekih4Pkx-zNON3sUaO-46" style="whiteSpace=wrap;html=1;fillColor=none;labelBorderColor=none;strokeColor=none;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font&gt;真偽型: 専攻名から専攻情報重複チェック ( 文字列型: name )&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="565" x="26" as="geometry" />
+        </mxCell>
+        <mxCell id="5Vekih4Pkx-zNON3sUaO-49" parent="5Vekih4Pkx-zNON3sUaO-42" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="真偽型: doubleCheck ← repository.existsByName(name)" vertex="1">
+          <mxGeometry height="30" width="590" x="248" y="243" as="geometry" />
+        </mxCell>
+        <mxCell id="5Vekih4Pkx-zNON3sUaO-51" connectable="0" parent="1" style="group" value="D" vertex="1">
+          <mxGeometry height="813" width="1228" x="6879" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="5Vekih4Pkx-zNON3sUaO-52" parent="5Vekih4Pkx-zNON3sUaO-51" style="text;html=1;whiteSpace=wrap;strokeColor=#6c8ebf;fillColor=light-dark(#daeece, #214210);align=center;verticalAlign=top;rounded=0;fontSize=36;fontColor=#00A1FF;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="&lt;div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;span style=&quot;color: rgb(50, 182, 49);&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;span&gt;method&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;span style=&quot;color: rgba(0, 0, 0, 0);&quot;&gt;&lt;span style=&quot;color: rgba(0, 0, 0, 0);&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="813" width="1228" x="-10" y="13" as="geometry" />
+        </mxCell>
+        <mxCell id="5Vekih4Pkx-zNON3sUaO-53" parent="5Vekih4Pkx-zNON3sUaO-51" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="majorInfo.setName(value)" vertex="1">
+          <mxGeometry height="30" width="590" x="305" y="336" as="geometry" />
+        </mxCell>
+        <mxCell id="5Vekih4Pkx-zNON3sUaO-54" parent="5Vekih4Pkx-zNON3sUaO-51" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;* annotation: @Service、@RequiredArgsConstructor&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;* 英字のメソッド呼び出しは、Java Spring 標準メソッド&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="590" x="238" y="733" as="geometry" />
+        </mxCell>
+        <mxCell id="5Vekih4Pkx-zNON3sUaO-55" connectable="0" parent="5Vekih4Pkx-zNON3sUaO-51" style="group" value="" vertex="1">
+          <mxGeometry height="30" width="951" x="122" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="5Vekih4Pkx-zNON3sUaO-56" parent="5Vekih4Pkx-zNON3sUaO-55" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=none;" value="&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;" vertex="1">
+          <mxGeometry height="20" width="20" y="5" as="geometry" />
+        </mxCell>
+        <mxCell id="5Vekih4Pkx-zNON3sUaO-57" parent="5Vekih4Pkx-zNON3sUaO-55" style="whiteSpace=wrap;html=1;fillColor=none;labelBorderColor=none;strokeColor=none;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font&gt;Major型: 専攻情報更新 ( 数値型: id, Map型&amp;lt;文字列型, 文字列型&amp;gt;: updates )&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="611.9760820045559" x="28.161731207289296" as="geometry" />
+        </mxCell>
+        <mxCell id="5Vekih4Pkx-zNON3sUaO-58" parent="5Vekih4Pkx-zNON3sUaO-51" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="Major型: majorInfo ← repository.findById(id).orElse(null)" vertex="1">
+          <mxGeometry height="30" width="590" x="248" y="243" as="geometry" />
+        </mxCell>
+        <mxCell id="5Vekih4Pkx-zNON3sUaO-59" parent="5Vekih4Pkx-zNON3sUaO-51" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="updates.forEach ( 文字列型: key, 文字列型: value)" vertex="1">
+          <mxGeometry height="30" width="590" x="248" y="267" as="geometry" />
+        </mxCell>
+        <mxCell id="5Vekih4Pkx-zNON3sUaO-60" parent="5Vekih4Pkx-zNON3sUaO-51" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="switch (key)" vertex="1">
+          <mxGeometry height="30" width="590" x="263" y="289" as="geometry" />
+        </mxCell>
+        <mxCell id="5Vekih4Pkx-zNON3sUaO-61" parent="5Vekih4Pkx-zNON3sUaO-51" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="case &quot;name&quot;:" vertex="1">
+          <mxGeometry height="30" width="590" x="281" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="5Vekih4Pkx-zNON3sUaO-85" parent="5Vekih4Pkx-zNON3sUaO-51" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="&lt;div&gt;case &quot;kana&quot;:&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;majorInfo.setKana(value)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="590" x="281" y="368" as="geometry" />
+        </mxCell>
+        <mxCell id="5Vekih4Pkx-zNON3sUaO-87" parent="5Vekih4Pkx-zNON3sUaO-51" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="return majorInfo.save()" vertex="1">
+          <mxGeometry height="30" width="590" x="251" y="449" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
