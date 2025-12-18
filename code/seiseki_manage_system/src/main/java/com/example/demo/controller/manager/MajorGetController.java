@@ -52,7 +52,7 @@ public class MajorGetController {
 		
 		Major majorInfo = (Major)session.getAttribute("major");
 		
-		session.removeAttribute("major");
+		String setResult = (String)session.getAttribute("major_set_result");
 		
 		String registerResult = (String)session.getAttribute("major_register_result");
 		
@@ -64,7 +64,19 @@ public class MajorGetController {
 			
 			redirectAttributes.addFlashAttribute("major_register_result");
 			
+			session.removeAttribute("major_register_result");
+			
+		} else if (setResult != null) {
+		
+			redirectAttributes.addFlashAttribute("major");
+			
+			redirectAttributes.addFlashAttribute("major_set_result");
+			
+			session.removeAttribute("major_set_result");
+			
+		
 		} else {
+			
 			
 			if (majorId <= 0) {
 				
@@ -78,6 +90,8 @@ public class MajorGetController {
 			
 			
 		}
+		
+		session.removeAttribute("major");
 		
 		
 		session.setAttribute("major_get_id", majorId);

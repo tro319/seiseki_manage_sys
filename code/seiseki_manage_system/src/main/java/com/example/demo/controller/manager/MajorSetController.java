@@ -41,7 +41,7 @@ public class MajorSetController {
 	 */
 	
 	@GetMapping("/manager/major_update")
-	public String getMajor(HttpSession session, RedirectAttributes redirectAttributes, @RequestParam int id) {
+	public String getMajor(HttpSession session, RedirectAttributes redirectAttributes, @RequestParam(required=false) int id) {
 		
 		Integer loginId = (Integer)session.getAttribute("log_manager_id");
 		
@@ -161,7 +161,7 @@ public class MajorSetController {
 		}
 		
 		
-		return "redirect:/manager/major";
+		return "redirect:/manager/major?id=" + majorInfo.getId();
 		
 		
 		

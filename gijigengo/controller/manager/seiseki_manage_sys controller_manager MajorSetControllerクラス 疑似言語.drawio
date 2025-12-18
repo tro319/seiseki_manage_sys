@@ -43,8 +43,8 @@
         <mxCell id="oz1cKkfVO5sXyGluxh9x-4" parent="c38XxfE_ktTZxuxlPpQj-2" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="return &quot;redirect:/manager/login&quot;" vertex="1">
           <mxGeometry height="30" width="719.4722222222223" x="340.225" y="271" as="geometry" />
         </mxCell>
-        <mxCell id="6L-nu4Ug8Yf35uoyuxhw-4" parent="c38XxfE_ktTZxuxlPpQj-2" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="return &quot;redirect:/manager/major_update_view?id=&quot; + majorId" vertex="1">
-          <mxGeometry height="30" width="719.4722222222223" x="286.64166666666665" y="650" as="geometry" />
+        <mxCell id="6L-nu4Ug8Yf35uoyuxhw-4" parent="c38XxfE_ktTZxuxlPpQj-2" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="return &quot;redirect:/manager/major_update_view&quot;" vertex="1">
+          <mxGeometry height="30" width="719.4722222222223" x="286.64166666666665" y="682" as="geometry" />
         </mxCell>
         <mxCell id="qe978AUgRfH6pYfC2kXx-1" parent="c38XxfE_ktTZxuxlPpQj-2" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;if ( majorInfo != null )&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="30" width="719.4722222222223" x="298.7638888888889" y="419" as="geometry" />
@@ -91,6 +91,9 @@
         <mxCell id="ZgwepKaLMG63Evkcn8Lz-8" parent="c38XxfE_ktTZxuxlPpQj-2" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="redirect[&quot;major_set_data&quot;] ← majorSetForm" vertex="1">
           <mxGeometry height="30" width="719.4722222222223" x="289.00166666666667" y="635" as="geometry" />
         </mxCell>
+        <mxCell id="d84--D7bZ6PehKk1Mept-1" parent="c38XxfE_ktTZxuxlPpQj-2" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="session[&quot;major_set_id&quot;] ← majorId" vertex="1">
+          <mxGeometry height="30" width="719.4722222222223" x="286.64166666666665" y="665" as="geometry" />
+        </mxCell>
         <mxCell id="c38XxfE_ktTZxuxlPpQj-3" connectable="0" parent="1" style="group" value="" vertex="1">
           <mxGeometry height="1364" width="1815" x="1514" y="342" as="geometry" />
         </mxCell>
@@ -112,7 +115,7 @@
         <mxCell id="c38XxfE_ktTZxuxlPpQj-9" parent="c38XxfE_ktTZxuxlPpQj-8" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=none;" value="&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;" vertex="1">
           <mxGeometry height="19.447287615148415" width="19.447287615148415" x="59.240873422040266" y="5" as="geometry" />
         </mxCell>
-        <mxCell id="c38XxfE_ktTZxuxlPpQj-10" parent="c38XxfE_ktTZxuxlPpQj-8" style="whiteSpace=wrap;html=1;fillColor=none;labelBorderColor=none;strokeColor=none;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font&gt;文字列型: 専攻情報更新処理 ( HttpSession型: session, RedirectAttributes型: redirectAttributes, MajorSetForm型: form,&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font&gt;@RequestParam (required=false) 数値型: id&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font&gt;&amp;nbsp;)&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;" vertex="1">
+        <mxCell id="c38XxfE_ktTZxuxlPpQj-10" parent="c38XxfE_ktTZxuxlPpQj-8" style="whiteSpace=wrap;html=1;fillColor=none;labelBorderColor=none;strokeColor=none;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font&gt;文字列型: 専攻情報更新処理 ( HttpSession型: session, RedirectAttributes型: redirectAttributes, MajorSetForm型: form&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font&gt;&amp;nbsp;)&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;" vertex="1">
           <mxGeometry height="30.28" width="1608.4597222222224" x="107.55555555555556" y="-0.28" as="geometry" />
         </mxCell>
         <mxCell id="c38XxfE_ktTZxuxlPpQj-11" parent="c38XxfE_ktTZxuxlPpQj-3" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="return &quot;redirect:/manager/login&quot;" vertex="1">
@@ -130,8 +133,8 @@
         <mxCell id="c38XxfE_ktTZxuxlPpQj-18" parent="c38XxfE_ktTZxuxlPpQj-3" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="updates.put(&quot;name&quot;, form.getName())" vertex="1">
           <mxGeometry height="30" width="991.5277777777778" x="485.68055555555554" y="466" as="geometry" />
         </mxCell>
-        <mxCell id="c38XxfE_ktTZxuxlPpQj-19" parent="c38XxfE_ktTZxuxlPpQj-3" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="数値型: majorId ← id" vertex="1">
-          <mxGeometry height="30" width="991.5277777777778" x="411.73611111111114" y="326" as="geometry" />
+        <mxCell id="c38XxfE_ktTZxuxlPpQj-19" parent="c38XxfE_ktTZxuxlPpQj-3" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="数値型: majorId ← session[&quot;major_set_id&quot;]" vertex="1">
+          <mxGeometry height="30" width="991.5277777777778" x="411.73611111111114" y="303" as="geometry" />
         </mxCell>
         <mxCell id="c38XxfE_ktTZxuxlPpQj-20" parent="c38XxfE_ktTZxuxlPpQj-3" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;if ( ! majorInfo.getName().equals(form.getName()))&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="30" width="991.5277777777778" x="453.75" y="438" as="geometry" />
@@ -163,11 +166,8 @@
         <mxCell id="c38XxfE_ktTZxuxlPpQj-30" parent="c38XxfE_ktTZxuxlPpQj-3" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;* PostMapping: &quot;&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;/manager/major_update&lt;/font&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;&quot;&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;* annotation: &lt;/font&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;@Controller&lt;/font&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;、@RequiredArgsConstructor&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;* 英字のメソッド呼び出しは、Java Spring 標準メソッド&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="30" width="991.5277777777778" x="371.40277777777777" y="1118" as="geometry" />
         </mxCell>
-        <mxCell id="6JV01S_b5UkNJE936rv4-3" parent="c38XxfE_ktTZxuxlPpQj-3" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="return &quot;redirect:/manager/majors&quot;" vertex="1">
-          <mxGeometry height="30" width="991.5277777777778" x="468.875" y="302" as="geometry" />
-        </mxCell>
-        <mxCell id="6JV01S_b5UkNJE936rv4-4" parent="c38XxfE_ktTZxuxlPpQj-3" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;if ( id &amp;lt;= 0 )&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="30" width="991.5277777777778" x="418.4583333333333" y="281" as="geometry" />
+        <mxCell id="GhtMfxnXWVZL6ALnewBD-1" parent="c38XxfE_ktTZxuxlPpQj-3" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="session[&quot;major_set_id&quot;] 削除" vertex="1">
+          <mxGeometry height="30" width="991.5277777777778" x="411.73611111111114" y="324" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
