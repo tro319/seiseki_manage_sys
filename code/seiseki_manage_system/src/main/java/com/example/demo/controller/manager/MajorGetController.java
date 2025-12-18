@@ -46,11 +46,7 @@ public class MajorGetController {
 			
 		}
 		
-		if (id <= 0) {
-			
-			return "redirect:/manager/majors";
-			
-		}
+
 		
 		Integer majorId = (Integer)id;
 		
@@ -70,6 +66,12 @@ public class MajorGetController {
 			
 		} else {
 			
+			if (majorId <= 0) {
+				
+				return "redirect:/manager/majors";
+				
+			}
+			
 			majorInfo = service.getMajor(majorId);
 			
 			redirectAttributes.addFlashAttribute("major", majorInfo);
@@ -78,7 +80,10 @@ public class MajorGetController {
 		}
 		
 		
-		return "redirect:/manager/major_view?id=" + majorId;
+		session.setAttribute("major_get_id", majorId);
+		
+		
+		return "redirect:/manager/major_view";
 		
 		
 		

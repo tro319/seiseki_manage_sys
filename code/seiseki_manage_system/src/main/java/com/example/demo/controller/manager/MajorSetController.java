@@ -90,8 +90,9 @@ public class MajorSetController {
 		
 		redirectAttributes.addFlashAttribute("major_set_data", majorSetForm);
 		
+		session.setAttribute("major_set_id", majorId);
 		
-		return "redirect:/manager/major_update_view?id=" + majorId;
+		return "redirect:/manager/major_update_view";
 		
 		
 		
@@ -110,7 +111,7 @@ public class MajorSetController {
 	 */
 	
 	@PostMapping("/manager/major_update")
-	public String setMajor(HttpSession session, RedirectAttributes redirectAttributes, MajorSetForm form, @RequestParam int id) {
+	public String setMajor(HttpSession session, RedirectAttributes redirectAttributes, MajorSetForm form) {
 		
 		Integer loginId = (Integer)session.getAttribute("log_manager_id");
 		
@@ -120,13 +121,10 @@ public class MajorSetController {
 			
 		}
 		
-		if (id <= 0) {
-			
-			return "redirect:/manager/majors";
-			
-		}
 		
-		Integer majorId = (Integer)id;
+		Integer majorId = (Integer)session.getAttribute("major_set_id");
+		
+		session.removeAttribute("major_set_id");
 		
 		Major majorInfo = service.getMajor(majorId);
 		
@@ -163,7 +161,7 @@ public class MajorSetController {
 		}
 		
 		
-		return "redirect:/manager/major?id=" + majorInfo.getId();
+		return "redirect:/manager/major";
 		
 		
 		
