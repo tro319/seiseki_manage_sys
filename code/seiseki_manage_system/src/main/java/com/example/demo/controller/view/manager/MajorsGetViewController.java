@@ -44,9 +44,11 @@ public class MajorsGetViewController {
 			
 		}
 		
+		
 		return "manager/majors";
 		
 		
 	}
+	
 	
 }

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>専攻一覧画面 | 成績管理システム</title>
+</head>
+<body th:attr="data-major-delete-result=${major_delete_result}">
+	
+	<main>
+		
+		<div class="page-main-tops">
+			
+			<div class="sub-title">
+				
+				<h2>専攻一覧画面</h2>
+				
+			</div>		
+				
+					
+			<div class="sub-link">
+				
+<!--				<a th:href=""></a>-->
+				
+			</div>	
+				
+	
+		</div>
+		
+
+		
+		<div class="container">
+		
+			
+			<table class="table majors-table" th:object="${majors}">
+				
+				<thead>
+					
+					<tr>
+						
+						<th>専攻名</th>
+						
+						<th>ふりがな</th>
+						
+						<th></th>
+						
+					</tr>
+					
+				</thead>
+				
+				<tbody>
+					
+					<tr th:if="${!#lists.isEmpty(majors)}" th:each="major : ${majors}">
+						
+						<td th:text="${major.name}"></td>
+						
+						<td th:text="${major.kana}"></td>
+						
+						<td><a th:href="@{/manager/major(id=${major.id})}">詳細</a></td>
+						
+					</tr>
+					
+				</tbody>
+
+				
+			</table>
+			
+			
+		</div>
+		
+	</main>
+	
+	<script>
+		
+		const registerResult = document.body.dataset.majorRegisterResult;
+		
+		const setResult = document.body.dataset.majorSetResult;
+		
+		if (registerResult) window.alert(registerResult);
+		
+		if (setResult) window.alert(setResult);
+		
+		
+	</script>
+
+</body>
+</html>

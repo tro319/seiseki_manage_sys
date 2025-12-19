@@ -90,6 +90,8 @@ public class MajorSetController {
 		
 		redirectAttributes.addFlashAttribute("major_set_data", majorSetForm);
 		
+		redirectAttributes.addFlashAttribute("major", majorInfo);
+		
 		session.setAttribute("major_set_id", majorId);
 		
 		return "redirect:/manager/major_update_view";

@@ -20,7 +20,7 @@
 					
 			<div class="sub-link">
 				
-<!--				<a th:href=""></a>-->
+				<a th:href="@{/manager/majors}">専攻一覧へ</a>
 				
 			</div>	
 				
@@ -32,7 +32,7 @@
 		<div class="container">
 		
 			
-			<table class="table border-off" th:object="${major}">
+			<table class="table major-table border-off" th:object="${major}">
 				
 				
 				<tr>
@@ -71,8 +71,8 @@
 			
 			<div class="edit-links">
 				
-				<a href="@{/manager/major_update}">更新</a>
-				<a href="@{/manager/major_delete}">削除</a>
+				<a th:href="@{/manager/major_update(id=${major.id})}">更新</a>
+				<a th:href="@{/manager/major_delete(id=${major.id})}" onclick="return confirm('本当に削除しますか?');">削除</a>
 				
 			</div>
 			
