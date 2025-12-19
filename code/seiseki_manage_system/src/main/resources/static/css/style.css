@@ -1,0 +1,148 @@
+@charset "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 1rem;
+	color: rgb(65, 65, 65);
+	background-color: rgb(231, 231, 231);
+}
+
+ul {
+	list-style: none;
+}
+
+.site-title {
+	font-size: 1.4rem;
+}
+
+.sub-title {
+	font-size: 1.2rem;
+}
+
+.page-main-tops {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 40px auto;
+	padding: 0 15px;
+}
+
+.container {
+	max-width: 960px;
+	padding: 15px 20px;
+	margin: 40px auto;
+}
+
+
+/* テーブル設定
+========================== */
+
+.border-table-cover {
+	overflow-x: auto;
+}
+
+.table.border-on {
+	width: 100%;
+	border: solid 1px rgb(65, 65, 65);
+	border-collapse: collapse;
+	white-space: nowrap;
+}
+
+.table.border-off {
+	max-width: 760px;
+}
+
+.table.border-on th,
+.table.border-on td {
+	padding: 4px 7px;
+}
+
+.table.border-on th {
+	border-color: #FFF;
+	font-weight: bold;
+	color: #FFF;
+	background-color: rgb(27, 51, 169);
+	border-left: solid 1px rgb(255, 255, 255);
+	border-bottom: solid 1px rgb(255, 255, 255);
+}
+
+.table.border-on td {
+	color: rgb(65, 65, 65);
+	border-left: solid 1px rgb(65, 65, 65);
+	border-bottom: solid 1px rgb(65, 65, 65);
+}
+
+.table.border-on td a {
+	text-decoration: none;
+	color: rgb(40, 148, 255);
+}
+
+
+/* メッセージスタイル設定
+========================== */
+
+.err {
+	color: rgb(255, 83, 83);
+}
+
+
+/* フォーム設定
+========================== */
+
+.form {
+	max-width: 760px;
+}
+
+.form div {
+	margin: 15px 5px;
+}
+
+.form label {
+	padding: 4px 7px;
+	margin: 7px 5px;
+}
+
+.form input {
+	border: solid 1px rgb(190, 190, 190);
+	box-shadow: 0 0 2px rgb(176, 176, 176);
+	outline: none;
+}
+
+.form input:focus {
+	border: solid 1px rgb(190, 190, 190);
+	box-shadow: 0 0 3px rgb(40, 148, 255);
+}
+
+.form .submit-btns {
+	display: flex;
+	justify-content: end;
+	align-items: center;
+} 
+
+.form .submit-btns input {
+	color: #FFF;
+	background-color: rgb(40, 148, 255);
+	border: none;
+	padding: 4px 7px;
+	margin: 5px;
+}
+
+.edit-links {
+	display: flex;
+	justify-content: end;
+	align-items: center;
+	margin: 25px 0;
+}
+
+.edit-links a {
+	text-decoration: none;
+	color: #FFF;
+	background-color: rgb(40, 148, 255);
+	padding: 4px 7px;
+	margin: 0px 8px 0 3px;
+}
+

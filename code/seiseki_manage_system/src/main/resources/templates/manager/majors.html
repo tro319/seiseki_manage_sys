@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>専攻一覧画面 | 成績管理システム</title>
+<link rel="stylesheet" th:href="@{/css/style.css}" />
 </head>
 <body th:attr="data-major-delete-result=${major_delete_result}">
 	
@@ -32,38 +33,42 @@
 		<div class="container">
 		
 			
-			<table class="table majors-table" th:object="${majors}">
-				
-				<thead>
+			<div class="border-table-cover">
+			
+				<table class="table border-on majors-table" th:object="${majors}">
 					
-					<tr>
+					<thead>
 						
-						<th>専攻名</th>
+						<tr>
+							
+							<th>専攻名</th>
+							
+							<th>ふりがな</th>
+							
+							<th></th>
+							
+						</tr>
 						
-						<th>ふりがな</th>
-						
-						<th></th>
-						
-					</tr>
+					</thead>
 					
-				</thead>
-				
-				<tbody>
+					<tbody>
+						
+						<tr th:if="${!#lists.isEmpty(majors)}" th:each="major : ${majors}">
+							
+							<td th:text="${major.name}"></td>
+							
+							<td th:text="${major.kana}"></td>
+							
+							<td><a th:href="@{/manager/major(id=${major.id})}">詳細</a></td>
+							
+						</tr>
+						
+					</tbody>
+	
 					
-					<tr th:if="${!#lists.isEmpty(majors)}" th:each="major : ${majors}">
-						
-						<td th:text="${major.name}"></td>
-						
-						<td th:text="${major.kana}"></td>
-						
-						<td><a th:href="@{/manager/major(id=${major.id})}">詳細</a></td>
-						
-					</tr>
-					
-				</tbody>
-
-				
-			</table>
+				</table>
+			
+			</div>
 			
 			
 		</div>
