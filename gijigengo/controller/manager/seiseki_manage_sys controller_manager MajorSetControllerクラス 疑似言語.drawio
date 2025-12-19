@@ -89,10 +89,13 @@
           <mxGeometry height="30" width="719.4722222222223" x="293.64166666666665" y="562" as="geometry" />
         </mxCell>
         <mxCell id="ZgwepKaLMG63Evkcn8Lz-8" parent="c38XxfE_ktTZxuxlPpQj-2" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="redirect[&quot;major_set_data&quot;] ← majorSetForm" vertex="1">
-          <mxGeometry height="30" width="719.4722222222223" x="289.00166666666667" y="635" as="geometry" />
+          <mxGeometry height="30" width="719.4722222222223" x="289.00166666666667" y="631" as="geometry" />
         </mxCell>
         <mxCell id="d84--D7bZ6PehKk1Mept-1" parent="c38XxfE_ktTZxuxlPpQj-2" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="session[&quot;major_set_id&quot;] ← majorId" vertex="1">
           <mxGeometry height="30" width="719.4722222222223" x="286.64166666666665" y="665" as="geometry" />
+        </mxCell>
+        <mxCell id="IjacaKGWgf308E-YV4n1-1" parent="c38XxfE_ktTZxuxlPpQj-2" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="redirect[&quot;major&quot;] ← majorInfo" vertex="1">
+          <mxGeometry height="30" width="719.4722222222223" x="289.00166666666667" y="646" as="geometry" />
         </mxCell>
         <mxCell id="c38XxfE_ktTZxuxlPpQj-3" connectable="0" parent="1" style="group" value="" vertex="1">
           <mxGeometry height="1364" width="1815" x="1514" y="342" as="geometry" />
