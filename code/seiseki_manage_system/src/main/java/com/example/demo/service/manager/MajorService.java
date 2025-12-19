@@ -7,8 +7,10 @@ import org.dozer.DozerBeanMapper;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.model.entity.Major;
+import com.example.demo.model.entity.Manager;
 import com.example.demo.model.form.manager.MajorRegisterForm;
 import com.example.demo.repository.MajorsRepository;
+import com.example.demo.repository.ManagersRepository;
 
 import lombok.RequiredArgsConstructor;
 
@@ -26,6 +28,8 @@ import lombok.RequiredArgsConstructor;
 public class MajorService {
 	
 	private final MajorsRepository repository;
+	
+	private final ManagersRepository managersRepository;
 	
 	private final DozerBeanMapper mapper;
 	
@@ -95,15 +99,19 @@ public class MajorService {
 	
 	/* form入力情報から、専攻登録
 	 * 
-	 * @param form 
-	 * @param updates 対象の更新情報
+	 * @param form フォーム入力情報
+	 * @param managerId 対象のマネージャーid
 	 * @return majorエンティティ1件
 	 * 
 	 */
 	
-	public Major registerMajor(MajorRegisterForm form) {
+	public Major registerMajor(MajorRegisterForm form, Integer managerId) {
 		
 		Major majorInfo = mapper.map(form,  Major.class);
+		
+		Manager managerInfo = managersRepository.findById(managerId).orElse(null);
+		
+		majorInfo.setManager(managerInfo);
 		
 		return repository.save(majorInfo);
 		

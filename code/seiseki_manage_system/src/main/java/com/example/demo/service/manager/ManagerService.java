@@ -34,5 +34,6 @@ public class ManagerService {
 		return managerInfo;
 		
 	}
+
 	
 }

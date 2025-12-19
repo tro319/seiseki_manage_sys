@@ -60,17 +60,17 @@ public class MajorGetController {
 		
 		if (majorInfo != null && registerResult != null) {
 			
-			redirectAttributes.addFlashAttribute("major");
+			redirectAttributes.addFlashAttribute("major", majorInfo);
 			
-			redirectAttributes.addFlashAttribute("major_register_result");
+			redirectAttributes.addFlashAttribute("major_register_result", registerResult);
 			
 			session.removeAttribute("major_register_result");
 			
 		} else if (setResult != null) {
 		
-			redirectAttributes.addFlashAttribute("major");
+			redirectAttributes.addFlashAttribute("major", majorInfo);
 			
-			redirectAttributes.addFlashAttribute("major_set_result");
+			redirectAttributes.addFlashAttribute("major_set_result", setResult);
 			
 			session.removeAttribute("major_set_result");
 			

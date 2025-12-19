@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>専攻登録画面 | 成績管理システム</title>
+</head>
+<body th:attr="data-logout-result=${logout_result}">
+	
+	<main>
+		
+		<div class="page-main-tops">
+			
+			<div class="sub-title">
+				
+				<h2>専攻登録画面</h2>
+				
+			</div>		
+				
+					
+			<div class="sub-link">
+				
+<!--				<a th:href=""></a>-->
+				
+			</div>	
+				
+	
+		</div>
+		
+
+		
+		<div class="container">
+		
+			
+			<p class="err" th:text="${major_register_result}"></p>
+			
+			<form method="post" th:action="@{/manager/major_register}" class="form major-register-form" th:object="${major_register_data}">
+				
+				
+				<div>
+					
+					<label for="name">専攻名:</label>
+						
+					<input type="text" th:field="*{name}" maxlength="30" required />
+					
+				</div>
+				
+				<div>
+					
+					<label for="kana">ふりがな:</label>
+					
+					<input type="text" th:field="*{kana}" maxlength="50" required />
+					
+				</div>
+				
+				<div class="submit-btns">
+					
+					<input type="submit" value="登録" />
+					
+				</div>
+				
+				
+			</form>
+			
+			
+		</div>
+		
+	</main>
+	
+	<script>
+		
+
+		
+	</script>
+
+</body>
+</html>

@@ -60,13 +60,13 @@ public class MajorRegisterController {
 			
 		}
 		
-		Major majorInfo = service.registerMajor(form);
+		Major majorInfo = service.registerMajor(form, loginId);
 		
 		session.setAttribute("major", majorInfo);
 		
 		session.setAttribute("major_register_result", "専攻登録が完了しました");
 		
-		return "redirect:/manager/major" + majorInfo.getId();
+		return "redirect:/manager/major?id=" + majorInfo.getId();
 		
 		
 		
