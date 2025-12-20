@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:145.0) Gecko/20100101 Firefox/145.0" version="29.2.4">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:146.0) Gecko/20100101 Firefox/146.0" version="29.2.9">
   <diagram name="ページ1" id="mb2iSDPSAOiip58z1rqg">
     <mxGraphModel grid="0" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -36,6 +36,15 @@
         </mxCell>
         <mxCell id="xyd6s_XqlhkdUzabNmaY-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=36;" value="外部結合関係" vertex="1">
           <mxGeometry height="30" width="854.5" x="155.75" y="715" as="geometry" />
+        </mxCell>
+        <mxCell id="gfIdGpgd79F-c0bc0PZm-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="大域: 文字列型: kana" vertex="1">
+          <mxGeometry height="30" width="590" x="1268" y="146" as="geometry" />
+        </mxCell>
+        <mxCell id="gfIdGpgd79F-c0bc0PZm-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="大域: Manager型: manager" vertex="1">
+          <mxGeometry height="30" width="590" x="1268" y="208" as="geometry" />
+        </mxCell>
+        <mxCell id="gfIdGpgd79F-c0bc0PZm-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="大域: List&amp;lt;ClassSubject&amp;gt;型: classSubjects" vertex="1">
+          <mxGeometry height="30" width="590" x="1268" y="185" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
