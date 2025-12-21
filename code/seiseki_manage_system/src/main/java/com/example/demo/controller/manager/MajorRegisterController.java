@@ -66,6 +66,8 @@ public class MajorRegisterController {
 		
 		session.setAttribute("major_register_result", "専攻登録が完了しました");
 		
+		session.removeAttribute("major_register_data");
+		
 		return "redirect:/manager/major?id=" + majorInfo.getId();
 		
 		

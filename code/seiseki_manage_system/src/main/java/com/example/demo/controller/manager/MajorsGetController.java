@@ -55,6 +55,8 @@ public class MajorsGetController {
 			
 			redirectAttributes.addFlashAttribute("major_delete_result", deleteResult);
 			
+			session.removeAttribute("major_delete_result");
+			
 		}
 		
 		redirectAttributes.addFlashAttribute("majors", majorsInfo);

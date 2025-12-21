@@ -131,6 +131,10 @@ ul {
 	margin: 5px;
 }
 
+
+/* 更新/削除ボタン群設定
+========================== */
+
 .edit-links {
 	display: flex;
 	justify-content: end;

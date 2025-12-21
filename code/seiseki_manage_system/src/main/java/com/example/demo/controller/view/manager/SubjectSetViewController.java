@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import lombok.RequiredArgsConstructor;
 
-/* MajorGetViewController クラス (専攻表示へ コントローラークラス)
+/* SubjectSetViewController クラス (教科更新フォーム表示へ コントローラークラス)
  * 
  * @author ys
  * 
@@ -17,9 +17,9 @@ import lombok.RequiredArgsConstructor;
 @Controller
 @RequiredArgsConstructor
 
-public class MajorGetViewController {
+public class SubjectSetViewController {
 
-	/* 専攻表示処理
+	/* 教科更新フォーム表示処理
 	 * 
 	 * @param session セッション値情報
 	 * @param model モデル値情報
@@ -27,8 +27,8 @@ public class MajorGetViewController {
 	 * 
 	 */
 	
-	@GetMapping("/manager/major_view")
-	public String majorView(HttpSession session, Model model) {
+	@GetMapping("/manager/subject_update_view")
+	public String formView(HttpSession session, Model model) {
 		
 		Integer loginId = (Integer)session.getAttribute("log_manager_id");
 		
@@ -38,23 +38,22 @@ public class MajorGetViewController {
 			
 		}
 		
-		if (!model.containsAttribute("major")) {
+		if (!model.containsAttribute("subject_set_data")) {
 			
-			Integer majorId = (Integer)session.getAttribute("major_get_id");
+			Integer subjectId = (Integer)session.getAttribute("subject_set_id");
+		
 			
-			session.removeAttribute("major_get_id");
-			
-			if (majorId > 0) {
+			if (subjectId > 0) {
 				
-				return "redirect:/manager/major?id=" + majorId;
+				return "redirect:/manager/subject_update?id=" + subjectId;
 				
 			}
 			
-			return "redirect:/manager/majors";
+			return "redirect:/manager/subjects";
 			
 		}
 		
-		return "manager/major";
+		return "manager/subject_set";
 		
 		
 	}

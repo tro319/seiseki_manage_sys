@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>専攻更新画面 | 成績管理システム</title>
+<title>教科更新画面 | 成績管理システム</title>
 <link rel="stylesheet" th:href="@{/css/style.css}" />
 </head>
 <body>
@@ -14,14 +14,14 @@
 			
 			<div class="sub-title">
 				
-				<h2>専攻更新画面</h2>
+				<h2>教科更新画面</h2>
 				
 			</div>		
 				
 					
 			<div class="sub-link">
 				
-				<a th:href="@{/manager/major(id=${major.id})}">専攻詳細へ</a>
+				<a th:href="@{/manager/subject(id=${subject.id})}">教科詳細へ</a>
 				
 			</div>	
 				
@@ -33,14 +33,14 @@
 		<div class="container">
 		
 			
-			<p class="err" th:text="${major_set_result}"></p>
+			<p class="err" th:text="${subject_set_result}"></p>
 			
-			<form method="post" th:action="@{/manager/major_update}" class="form major-set-form" th:object="${major_set_data}">
+			<form method="post" th:action="@{/manager/subject_update}" class="form subject-set-form" th:object="${subject_set_data}">
 				
 				
 				<div>
 					
-					<label for="name">専攻名</label>
+					<label for="name">教科名</label>
 						
 					<input type="text" th:field="*{name}" maxlength="30" required />
 					

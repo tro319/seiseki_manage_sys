@@ -38,7 +38,7 @@ public class MajorsGetViewController {
 			
 		}
 		
-		if (model.getAttribute("majors") == null) {
+		if (!model.containsAttribute("majors")) {
 			
 			return "redirect:/manager/majors";
 			

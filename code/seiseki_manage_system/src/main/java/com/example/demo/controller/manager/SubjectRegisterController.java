@@ -65,6 +65,8 @@ public class SubjectRegisterController {
 		
 		session.setAttribute("subject_register_result", "教科登録が完了しました");
 		
+		session.removeAttribute("subject_register_data");
+		
 		return "redirect:/manager/subject?id=" + subjectInfo.getId();
 		
 		

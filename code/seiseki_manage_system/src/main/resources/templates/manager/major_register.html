@@ -6,7 +6,7 @@
 <title>専攻登録画面 | 成績管理システム</title>
 <link rel="stylesheet" th:href="@{/css/style.css}" />
 </head>
-<body th:attr="data-logout-result=${logout_result}">
+<body>
 	
 	<main>
 		
@@ -40,7 +40,7 @@
 				
 				<div>
 					
-					<label for="name">専攻名:</label>
+					<label for="name">専攻名</label>
 						
 					<input type="text" th:field="*{name}" maxlength="30" required />
 					
@@ -48,7 +48,7 @@
 				
 				<div>
 					
-					<label for="kana">ふりがな:</label>
+					<label for="kana">ふりがな</label>
 					
 					<input type="text" th:field="*{kana}" maxlength="50" required />
 					

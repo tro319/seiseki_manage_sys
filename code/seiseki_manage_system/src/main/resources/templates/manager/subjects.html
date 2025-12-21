@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>専攻一覧画面 | 成績管理システム</title>
+<title>教科一覧画面 | 成績管理システム</title>
 <link rel="stylesheet" th:href="@{/css/style.css}" />
 </head>
-<body th:attr="data-major-delete-result=${major_delete_result}">
+<body th:attr="data-subject-delete-result=${subject_delete_result}">
 	
 	<main>
 		
@@ -14,7 +14,7 @@
 			
 			<div class="sub-title">
 				
-				<h2>専攻一覧画面</h2>
+				<h2>教科一覧画面</h2>
 				
 			</div>		
 				
@@ -35,13 +35,13 @@
 			
 			<div class="border-table-cover">
 			
-				<table class="table border-on majors-table" th:object="${majors}">
+				<table class="table border-on subjects-table" th:object="${subjects}">
 					
 					<thead>
 						
 						<tr>
 							
-							<th>専攻名</th>
+							<th>教科名</th>
 							
 							<th>ふりがな</th>
 							
@@ -53,13 +53,13 @@
 					
 					<tbody>
 						
-						<tr th:if="${!#lists.isEmpty(majors)}" th:each="major : ${majors}">
+						<tr th:if="${!#lists.isEmpty(subjects)}" th:each="subject : ${subjects}">
 							
-							<td th:text="${major.name}"></td>
+							<td th:text="${subject.name}"></td>
 							
-							<td th:text="${major.kana}"></td>
+							<td th:text="${subject.kana}"></td>
 							
-							<td><a th:href="@{/manager/major(id=${major.id})}">詳細</a></td>
+							<td><a th:href="@{/manager/subject(id=${subject.id})}">詳細</a></td>
 							
 						</tr>
 						
@@ -77,9 +77,11 @@
 	
 	<script>
 		
-		const deleteResult = document.body.dataset.majorDeleteResult;
+		const deleteResult = document.body.dataset.subjectDeleteResult;
 		
 		if (deleteResult) window.alert(deleteResult);
+		
+		
 		
 	</script>
 

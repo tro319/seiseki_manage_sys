@@ -55,6 +55,8 @@ public class SubjectsGetController {
 			
 			redirectAttributes.addFlashAttribute("subject_delete_result", deleteResult);
 			
+			session.removeAttribute("subject_delete_result");
+			
 		}
 		
 		redirectAttributes.addFlashAttribute("subjects", subjectsInfo);
