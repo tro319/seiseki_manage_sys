@@ -105,15 +105,13 @@ public class MajorSetController {
 	/* 専攻更新処理
 	 * 
 	 * @param session セッション値情報
-	 * @param redirectAttributes リダイレクト値情報
 	 * @param form 専攻更新フォーム入力情報
-	 * @param id リクエストパラムで指定された専攻id
 	 * @return 該当Controllerクラスへのパス
 	 * 
 	 */
 	
 	@PostMapping("/manager/major_update")
-	public String setMajor(HttpSession session, RedirectAttributes redirectAttributes, MajorSetForm form) {
+	public String setMajor(HttpSession session, MajorSetForm form) {
 		
 		Integer loginId = (Integer)session.getAttribute("log_manager_id");
 		
@@ -154,7 +152,7 @@ public class MajorSetController {
 				
 			}
 			
-			majorInfo = service.updateMajor(majorId, updates);
+			majorInfo = service.updateMajor(majorId, updates, loginId);
 			
 			session.setAttribute("major", majorInfo);
 			

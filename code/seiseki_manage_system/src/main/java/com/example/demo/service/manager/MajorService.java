@@ -141,7 +141,7 @@ public class MajorService {
 	 * 
 	 */
 	
-	public Major updateMajor(Integer id, Map<String, String>updates) {
+	public Major updateMajor(Integer id, Map<String, String>updates, Integer managerId) {
 		
 		Major majorInfo = repository.findById(id).orElse(null);
 		
@@ -166,6 +166,9 @@ public class MajorService {
 			
 		});
 		
+		Manager managerInfo = managersRepository.findById(managerId).orElse(null);
+		
+		majorInfo.setManager(managerInfo);
 		
 		return repository.save(majorInfo);
 		

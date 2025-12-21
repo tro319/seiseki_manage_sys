@@ -199,7 +199,7 @@
         <mxCell id="5Vekih4Pkx-zNON3sUaO-85" parent="5Vekih4Pkx-zNON3sUaO-51" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="&lt;div&gt;case &quot;kana&quot;:&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;subject&lt;/span&gt;Info.setKana(value)&lt;/div&gt;" vertex="1">
           <mxGeometry height="30" width="590" x="281" y="368" as="geometry" />
         </mxCell>
-        <mxCell id="5Vekih4Pkx-zNON3sUaO-87" parent="5Vekih4Pkx-zNON3sUaO-51" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="return subjectInfo.save()" vertex="1">
+        <mxCell id="5Vekih4Pkx-zNON3sUaO-87" parent="5Vekih4Pkx-zNON3sUaO-51" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="return repository.save(subjectInfo)" vertex="1">
           <mxGeometry height="30" width="590" x="248" y="455" as="geometry" />
         </mxCell>
         <mxCell id="drH7plhnmeeSqSeTDmUj-1" parent="5Vekih4Pkx-zNON3sUaO-51" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="Manager型: managerInfo ← managersRepository.findById(managerId).orElse(null)" vertex="1">

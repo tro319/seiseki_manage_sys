@@ -56,7 +56,6 @@ public class MajorGetController {
 		
 		String registerResult = (String)session.getAttribute("major_register_result");
 		
-		session.removeAttribute("major_register_result");
 		
 		if (majorInfo != null && registerResult != null) {
 			
