@@ -109,17 +109,14 @@
         <mxCell id="c38XxfE_ktTZxuxlPpQj-6" parent="c38XxfE_ktTZxuxlPpQj-3" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;if ( loginId == null )&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="30" width="991.5277777777778" x="418.4583333333333" y="241" as="geometry" />
         </mxCell>
-        <mxCell id="c38XxfE_ktTZxuxlPpQj-7" parent="c38XxfE_ktTZxuxlPpQj-3" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="majorInfo = service.専攻情報更新処理(&amp;nbsp;majorId,&amp;nbsp;updates, loginId )" vertex="1">
+        <mxCell id="c38XxfE_ktTZxuxlPpQj-7" parent="c38XxfE_ktTZxuxlPpQj-3" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="majorInfo ← service.専攻情報更新処理(&amp;nbsp;majorId,&amp;nbsp;updates, loginId )" vertex="1">
           <mxGeometry height="30" width="991.5277777777778" x="449.99833333333333" y="603" as="geometry" />
         </mxCell>
         <mxCell id="c38XxfE_ktTZxuxlPpQj-8" connectable="0" parent="c38XxfE_ktTZxuxlPpQj-3" style="group" value="" vertex="1">
-          <mxGeometry height="30" width="1716.0152777777778" x="16.805555555555557" y="152" as="geometry" />
+          <mxGeometry height="30" width="1716.02" x="16.805555555555557" y="152" as="geometry" />
         </mxCell>
         <mxCell id="c38XxfE_ktTZxuxlPpQj-9" parent="c38XxfE_ktTZxuxlPpQj-8" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=none;" value="&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;" vertex="1">
           <mxGeometry height="19.447287615148415" width="19.447287615148415" x="59.240873422040266" y="5" as="geometry" />
-        </mxCell>
-        <mxCell id="c38XxfE_ktTZxuxlPpQj-10" parent="c38XxfE_ktTZxuxlPpQj-8" style="whiteSpace=wrap;html=1;fillColor=none;labelBorderColor=none;strokeColor=none;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font&gt;文字列型: 専攻情報更新処理 ( HttpSession型: session, MajorSetForm型: form&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font&gt;&amp;nbsp;)&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;" vertex="1">
-          <mxGeometry height="30.28" width="1608.4597222222224" x="107.55555555555556" y="-0.28" as="geometry" />
         </mxCell>
         <mxCell id="c38XxfE_ktTZxuxlPpQj-11" parent="c38XxfE_ktTZxuxlPpQj-3" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="return &quot;redirect:/manager/login&quot;" vertex="1">
           <mxGeometry height="30" width="991.5277777777778" x="468.875" y="262" as="geometry" />
@@ -171,6 +168,9 @@
         </mxCell>
         <mxCell id="GhtMfxnXWVZL6ALnewBD-1" parent="c38XxfE_ktTZxuxlPpQj-3" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="session[&quot;major_set_id&quot;] 削除" vertex="1">
           <mxGeometry height="30" width="991.5277777777778" x="411.73611111111114" y="324" as="geometry" />
+        </mxCell>
+        <mxCell id="c38XxfE_ktTZxuxlPpQj-10" parent="c38XxfE_ktTZxuxlPpQj-3" style="whiteSpace=wrap;html=1;fillColor=none;labelBorderColor=none;strokeColor=none;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font&gt;文字列型: 専攻情報更新処理 ( HttpSession型: session, MajorSetForm型: form&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font&gt;&amp;nbsp;)&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30.28" width="635.02" x="110.99555555555571" y="152" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
