@@ -194,6 +194,21 @@ public class ClassService {
 	}
 	
 	
+	/* すべてのmajorエンティティ群を取得
+	 * 
+	 * @return 専攻一覧情報
+	 * 
+	 */
+	
+	public List<Major> getMajors() {
+		
+		List<Major> majorsInfo = majorsRepository.findAll();
+		
+		return majorsInfo;
+		
+	}
+	
+	
 	
 
 }

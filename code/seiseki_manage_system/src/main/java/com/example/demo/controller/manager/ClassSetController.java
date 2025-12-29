@@ -1,6 +1,7 @@
 package com.example.demo.controller.manager;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import jakarta.servlet.http.HttpSession;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.example.demo.model.entity.ClassEntity;
+import com.example.demo.model.entity.Major;
 import com.example.demo.model.form.manager.ClassSetForm;
 import com.example.demo.service.manager.ClassService;
 
@@ -88,10 +90,16 @@ public class ClassSetController {
 			
 		}
 		
+		// フォーム選択のため、専攻一覧取得
+		
+		List<Major> majorsInfo = service.getMajors();
+		
+		redirectAttributes.addFlashAttribute("major_all", majorsInfo);
+		
 		
 		redirectAttributes.addFlashAttribute("class_set_data", classSetForm);
 		
-		redirectAttributes.addFlashAttribute("class", classInfo);
+		redirectAttributes.addFlashAttribute("class_info", classInfo);
 		
 		session.setAttribute("class_set_id", classId);
 		
@@ -157,7 +165,7 @@ public class ClassSetController {
 			
 			classInfo = service.updateClass(classId, updates, loginId);
 			
-			session.setAttribute("class", classInfo);
+			session.setAttribute("class_info", classInfo);
 			
 			session.setAttribute("class_set_result", "クラス情報を更新しました");
 			

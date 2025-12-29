@@ -50,7 +50,7 @@ public class ClassGetController {
 		
 		Integer classId = (Integer)id;
 		
-		ClassEntity classInfo = (ClassEntity)session.getAttribute("class");
+		ClassEntity classInfo = (ClassEntity)session.getAttribute("class_info");
 		
 		String setResult = (String)session.getAttribute("class_set_result");
 		
@@ -59,7 +59,7 @@ public class ClassGetController {
 		
 		if (classInfo != null && registerResult != null) {
 			
-			redirectAttributes.addFlashAttribute("class", classInfo);
+			redirectAttributes.addFlashAttribute("class_info", classInfo);
 			
 			redirectAttributes.addFlashAttribute("class_register_result", registerResult);
 			
@@ -67,7 +67,7 @@ public class ClassGetController {
 			
 		} else if (setResult != null) {
 		
-			redirectAttributes.addFlashAttribute("class", classInfo);
+			redirectAttributes.addFlashAttribute("class_info", classInfo);
 			
 			redirectAttributes.addFlashAttribute("class_set_result", setResult);
 			
@@ -85,12 +85,12 @@ public class ClassGetController {
 			
 			classInfo = service.getClassById(classId);
 			
-			redirectAttributes.addFlashAttribute("class", classInfo);
+			redirectAttributes.addFlashAttribute("class_info", classInfo);
 			
 			
 		}
 		
-		session.removeAttribute("class");
+		session.removeAttribute("class_info");
 		
 		
 		session.setAttribute("class_get_id", classId);

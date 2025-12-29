@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>クラス詳細画面 | 成績管理システム</title>
+<link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body th:attr="data-class-register-result=${class_register_result}, data-class-set-result=${class_set_result}">
+	
+	<main>
+		
+		<div class="page-main-tops">
+			
+			<div class="sub-title">
+				
+				<h2>クラス詳細画面</h2>
+				
+			</div>		
+				
+					
+			<div class="sub-link">
+				
+				<a th:href="@{/manager/classes}">クラス一覧へ</a>
+				
+			</div>	
+				
+	
+		</div>
+		
+
+		
+		<div class="container">
+		
+			
+			<table class="table class-table border-off" th:object="${class_info}">
+				
+				
+				<tr>
+					
+					<td>入学年度</td>
+					
+					<td th:text="*{startYear}"></td>
+					
+				</tr>
+				
+				<tr>
+					
+					<td>専攻名</td>
+					
+					<td th:text="*{major.name}"></td>
+					
+				</tr>
+				
+				<tr>
+					
+					<td>最終更新者</td>
+					
+					<td th:text="*{manager.name}"></td>
+					
+				</tr>
+				
+				<tr>
+					
+					<td>最終更新日時</td>
+					
+					<td th:text="*{#temporals.format(updatedAt, 'yyyy年MM月dd日 HH時')}"></td>
+					
+				</tr>
+				
+			</table>
+			
+			<div class="edit-links">
+				
+				<a th:href="@{/manager/class_update(id=${class_info.id})}">更新</a>
+				<a th:href="@{/manager/class_delete(id=${class_info.id})}" onclick="return confirm('本当に削除しますか?');">削除</a>
+				
+			</div>
+			
+			
+		</div>
+		
+	</main>
+	
+	<script>
+		
+		const registerResult = document.body.dataset.classRegisterResult;
+		
+		const setResult = document.body.dataset.classSetResult;
+		
+		if (registerResult) window.alert(registerResult);
+		
+		if (setResult) window.alert(setResult);
+		
+		
+	</script>
+
+</body>
+</html>

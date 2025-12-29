@@ -12,7 +12,7 @@ import lombok.Data;
 
 public class ClassSetForm {
 	
-	private int startYear;
+	private Integer startYear;
 	
 	private String majorName;
 

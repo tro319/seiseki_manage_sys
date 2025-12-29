@@ -78,7 +78,7 @@ public class ClassRegisterController {
 		
 		ClassEntity classInfo = service.registerClass(form, loginId, majorId);
 		
-		session.setAttribute("class", classInfo);
+		session.setAttribute("class_info", classInfo);
 		
 		session.setAttribute("class_register_result", "クラス登録が完了しました");
 		

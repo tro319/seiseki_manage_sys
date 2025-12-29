@@ -12,7 +12,7 @@ import lombok.Data;
 
 public class ClassRegisterForm {
 	
-	private int startYear;
+	private Integer startYear;
 	
 	private String majorName;
 
