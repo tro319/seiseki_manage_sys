@@ -15,7 +15,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.example.demo.model.entity.ClassEntity;
 import com.example.demo.model.entity.Major;
 import com.example.demo.model.form.manager.ClassSetForm;
-import com.example.demo.service.manager.ClassService;
+import com.example.demo.service.ClassService;
 
 import lombok.RequiredArgsConstructor;
 

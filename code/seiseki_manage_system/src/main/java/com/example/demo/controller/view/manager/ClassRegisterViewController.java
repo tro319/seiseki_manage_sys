@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import com.example.demo.model.entity.Major;
 import com.example.demo.model.form.manager.ClassRegisterForm;
-import com.example.demo.service.manager.ClassService;
+import com.example.demo.service.ClassService;
 
 import lombok.RequiredArgsConstructor;
 

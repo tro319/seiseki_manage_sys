@@ -9,7 +9,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.example.demo.model.entity.Manager;
 import com.example.demo.model.form.LoginForm;
-import com.example.demo.service.manager.ManagerService;
+import com.example.demo.service.ManagerService;
 
 import lombok.RequiredArgsConstructor;
 

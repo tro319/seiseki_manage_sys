@@ -8,7 +8,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.example.demo.model.entity.Major;
 import com.example.demo.model.form.manager.MajorRegisterForm;
-import com.example.demo.service.manager.MajorService;
+import com.example.demo.service.MajorService;
 
 import lombok.RequiredArgsConstructor;
 
