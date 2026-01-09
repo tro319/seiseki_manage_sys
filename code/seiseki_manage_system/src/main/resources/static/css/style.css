@@ -67,7 +67,12 @@ ul {
 	color: #FFF;
 	background-color: rgb(65, 117, 237);
 	border-left: solid 1px rgb(255, 255, 255);
+	border-top: solid 1px rgb(255, 255, 255);
 	border-bottom: solid 1px rgb(255, 255, 255);
+}
+
+.table.border-on th:last-child {
+	border-right: solid 1px rgb(255, 255, 255);
 }
 
 .table.border-on td {
