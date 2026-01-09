@@ -67,7 +67,7 @@ CREATE TABLE `classes` (
   KEY `major_id` (`major_id`),
   CONSTRAINT `classes_ibfk_1` FOREIGN KEY (`manager_id`) REFERENCES `managers` (`id`),
   CONSTRAINT `classes_ibfk_2` FOREIGN KEY (`major_id`) REFERENCES `majors` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -76,6 +76,7 @@ CREATE TABLE `classes` (
 
 LOCK TABLES `classes` WRITE;
 /*!40000 ALTER TABLE `classes` DISABLE KEYS */;
+INSERT INTO `classes` VALUES (1,2025,6,1,'2026-01-09 16:57:23','2026-01-09 16:57:23');
 /*!40000 ALTER TABLE `classes` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -97,7 +98,7 @@ CREATE TABLE `majors` (
   UNIQUE KEY `name` (`name`),
   KEY `manager_id` (`manager_id`),
   CONSTRAINT `majors_ibfk_1` FOREIGN KEY (`manager_id`) REFERENCES `managers` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -106,7 +107,7 @@ CREATE TABLE `majors` (
 
 LOCK TABLES `majors` WRITE;
 /*!40000 ALTER TABLE `majors` DISABLE KEYS */;
-INSERT INTO `majors` VALUES (1,'ITプログラマー専攻','ITプログラマーせんこう',1,'2025-12-19 15:27:59','2025-12-19 15:27:59'),(2,'CGクリエイター専攻','CGクリエイターせんこう',1,'2025-12-19 15:54:25','2025-12-19 15:54:25'),(3,'ホワイトハッカー専攻','ホワイトハッカーせんこう',1,'2025-12-19 15:56:04','2025-12-19 15:56:04'),(4,'ゲームクリエイター専攻','ゲームクリエイターせんこう',1,'2025-12-19 16:00:32','2025-12-19 16:00:32');
+INSERT INTO `majors` VALUES (2,'ゲームクリエイター専攻','げーむくりえいたーせんこう',1,'2025-12-19 15:54:25','2026-01-09 17:35:45'),(6,'ITプログラマー専攻','ITぷろぐらまーせんこう',1,'2025-12-19 17:26:08','2026-01-09 17:34:38'),(7,'プロゲーマー専攻','ぷろげーまーせんこう',1,'2026-01-09 17:33:46','2026-01-09 17:33:46');
 /*!40000 ALTER TABLE `majors` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -266,7 +267,7 @@ CREATE TABLE `subjects` (
   UNIQUE KEY `name` (`name`),
   KEY `manager_id` (`manager_id`),
   CONSTRAINT `subjects_ibfk_1` FOREIGN KEY (`manager_id`) REFERENCES `managers` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -275,6 +276,7 @@ CREATE TABLE `subjects` (
 
 LOCK TABLES `subjects` WRITE;
 /*!40000 ALTER TABLE `subjects` DISABLE KEYS */;
+INSERT INTO `subjects` VALUES (1,'Java Spring基礎','Java Springきそ',1,'2026-01-09 17:01:36','2026-01-09 17:01:36');
 /*!40000 ALTER TABLE `subjects` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -360,4 +362,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-12-19 16:26:05
+-- Dump completed on 2026-01-09 17:42:11
