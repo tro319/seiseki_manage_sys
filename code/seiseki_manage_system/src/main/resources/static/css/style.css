@@ -65,7 +65,7 @@ ul {
 	border-color: #FFF;
 	font-weight: bold;
 	color: #FFF;
-	background-color: rgb(27, 51, 169);
+	background-color: rgb(65, 117, 237);
 	border-left: solid 1px rgb(255, 255, 255);
 	border-bottom: solid 1px rgb(255, 255, 255);
 }
@@ -149,4 +149,251 @@ ul {
 	padding: 4px 7px;
 	margin: 0px 8px 0 3px;
 }
+
+
+/* ヘッダー共通設定
+============================== */
+
+#header {
+	width: 100%;
+	color: #FFF;
+	background-color: rgb(39, 98, 235);
+}
+
+.header-inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 25px 40px;
+	margin-bottom: 40px;
+}
+
+#pc_nav {
+	display: block;
+}
+
+.header-list {
+	display: flex;
+	align-items: center;
+}
+
+.header-list li {
+	color: #FFF;
+	margin-left: 13px;
+}
+
+.header-list li a {
+	text-decoration: none;
+	color: #FFF;
+}
+
+#sp_nav {
+	display: none;
+}
+
+.hamburgers-cover {
+	display: none;
+}
+
+/* フッター共通設定
+============================== */
+#footer {
+    width: 100%;
+	color: #FFF;
+    background: rgb(65, 117, 237);
+}
+
+.footer-inner {
+    display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 40px;
+    margin-bottom: 30px;
+}
+
+#copy {
+	font-size: 0.7rem;
+	text-align: center;
+	padding: 40px;
+}
+
+.footer-list {
+    flex-direction: column;
+}
+
+.footer-list li {
+	margin-bottom: 20px;
+}
+
+.footer-list li:last-child {
+	margin-bottom: 0;
+}
+
+.footer-list li a {
+	text-decoration: none;
+    color: #FFF;
+}
+
+/*.footer-list a:hover {*/
+/*    text-decoration: underline;*/
+/*}*/
+
+
+
+/* メイン部分上部表示、共通設定
+============================== */
+
+.page-main-tops {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 40px;
+}
+
+
+/* 小型端末など表示、共通設定
+============================== */
+
+@media screen and (max-width: 1024px) {
+	
+	.header-inner {
+		padding: 25px 7px;
+	}
+	
+	.footer-inner {
+	    padding: 16px 20px;
+	    flex-direction: column;
+	    gap: 12px;
+	    text-align: center;
+	}
+	.footer-links {
+	    justify-content: center;
+	}
+	
+	.hamburgers-cover {
+		position: absolute;
+		top: 30px;
+		right: 7px;
+		display: block;
+		width: 40px;
+		height: 16px;
+		border-radius: 7px;
+		z-index: 99;
+	} 
+	
+	.hamburgers {
+		display: block;
+		border: none;
+		color: inherit;
+		background: none;
+		width: 100%;
+		height: 100%;
+		padding: 0;
+	}
+	
+	.hamburger-border {
+		width: 100%;
+		display: block;
+		height: 2px;
+		background-color: #FFF;
+		transition: transform 0.6s;
+		-webkit-transition: transform 0.6s;
+		-moz-transition: transform 0.6s;
+		-ms-transition: transform 0.6s;
+		-o-transition: transform 0.6s;
+	}
+	
+	.hamburger-border:nth-child(2) {
+		margin-top: 8px;
+	}
+	
+	.hamburger-border:last-child {
+		margin-top: 8px;
+	}
+	
+	.hamburgers-cover.click-on .hamburgers .hamburger-border:first-child {
+		transform: translate(0px, 9px) rotate(45deg);
+		-webkit-transform: translate(0px, 9px) rotate(45deg);
+		-moz-transform: translate(0px, 9px) rotate(45deg);
+		-ms-transform: translate(0px, 9px) rotate(45deg);
+		-o-transform: translate(0px, 9px) rotate(45deg);
+	}
+	
+	.hamburgers-cover.click-on .hamburgers .hamburger-border:nth-child(2) {
+		opacity: 0;
+	}
+	
+	.hamburgers-cover.click-on .hamburgers .hamburger-border:last-child {
+		transform: translate(0px, -9px) rotate(-45deg);
+		-webkit-transform: translate(0px, -9px) rotate(-45deg);
+		-moz-transform: translate(0px, -9px) rotate(-45deg);
+		-ms-transform: translate(0px, -9px) rotate(-45deg);
+		-o-transform: translate(0px, -9px) rotate(-45deg);
+	}
+	
+	#pc_nav {
+		display: none;
+	}
+	
+	#sp_nav {
+		display: none;
+	}
+	
+	#sp_nav.open {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 50%;
+		height: 100vh;
+		display: block;
+		background-color: rgba(0, 0, 0, 0.8);
+		animation-name: menu-fadeopen-anime;
+		animation-duration: 0.6s;
+		opacity: 1;
+		transition: 0.6s all;
+		-webkit-transition: 0.6s all;
+		-moz-transition: 0.6s all;
+		-ms-transition: 0.6s all;
+		-o-transition: 0.6s all;
+	}
+	
+	
+	@keyframes menu-fadeopen-anime {
+		
+		from {
+			opacity: 0;
+		}
+		
+		to {
+			opacity: 1;
+		}
+		
+	}
+	
+	
+	#sp_nav.open .header-list {
+		width: 100%;
+		display: block;
+		flex-direction: column;
+		text-align: left;
+		padding: 40px 0 0 0;
+	}
+	
+	#sp_nav.open .header-list li {
+		margin: 0 0 20px 40px;
+	}
+	
+	#sp_nav.open .header-list li:first-child {
+		margin: 0 0 30px 40px;
+	}
+	
+	
+	
+	.page-main-tops {
+		padding: 0 10px;
+	}
+	
+}
+
+
 

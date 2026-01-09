@@ -4,9 +4,24 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>クラス更新画面 | 成績管理システム</title>
+
+<!-- CSS -->
+
 <link rel="stylesheet" th:href="@{/css/style.css}" />
+
 </head>
 <body>
+	
+	
+	
+	<header th:replace="~{/manager/layouts/layout :: common_header_after}">
+		
+
+		
+	</header>
+	
+	
+	
 	
 	<main>
 		
@@ -73,11 +88,21 @@
 		
 	</main>
 	
-	<script>
+	
+	
+	<footer th:replace="~{/manager/layouts/layout :: common_footer_after}">
 		
+	</footer>
+	
+	
+	
+	
+	<!-- JS -->
 
-		
-	</script>
+	<script th:src="@{/js/original.js}"></script>
+
+	
+	
 
 </body>
 </html>

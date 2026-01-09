@@ -4,9 +4,24 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>専攻詳細画面 | 成績管理システム</title>
+
+<!-- CSS -->
+
 <link rel="stylesheet" th:href="@{/css/style.css}" />
+
+
+
 </head>
 <body th:attr="data-major-register-result=${major_register_result}, data-major-set-result=${major_set_result}">
+	
+	
+	<header th:replace="~{/manager/layouts/layout :: common_header_after}">
+		
+
+		
+	</header>
+	
+	
 	
 	<main>
 		
@@ -81,6 +96,23 @@
 		</div>
 		
 	</main>
+	
+	
+	
+	<footer th:replace="~{/manager/layouts/layout :: common_footer_after}">
+		
+	</footer>
+	
+	
+	
+	
+	<!-- JS -->
+
+	<script th:src="@{/js/original.js}"></script>
+
+
+
+	
 	
 	<script>
 		

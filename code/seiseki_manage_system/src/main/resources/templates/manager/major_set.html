@@ -27,6 +27,15 @@
 </head>
 <body>
 	
+	
+	<header th:replace="~{/manager/layouts/layout :: common_header_after}">
+		
+
+		
+	</header>
+	
+	
+	
 	<main>
 		
 		<div class="page-main-tops">
@@ -87,11 +96,20 @@
 		
 	</main>
 	
-	<script>
+	
+	
+	<footer th:replace="~{/manager/layouts/layout :: common_footer_after}">
 		
+	</footer>
+	
+	
+	
+	<!-- JS -->
 
-		
-	</script>
+	<script th:src="@{/js/original.js}"></script>
+
+
+
 
 </body>
 </html>
