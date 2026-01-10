@@ -6,9 +6,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.example.demo.model.entity.Manager;
+import com.example.demo.service.ManagerService;
+
 import lombok.RequiredArgsConstructor;
 
-/* LogoutController クラス (ログアウト処理コントローラークラス)
+/* ManagerGetController クラス (管理者取得処理コントローラークラス)
  * 
  * @author ys
  * 
@@ -17,11 +20,12 @@ import lombok.RequiredArgsConstructor;
 @Controller
 @RequiredArgsConstructor
 
-public class LogoutController {
+public class ManagerGetController {
 	
 	
+	private final ManagerService service;
 
-	/* ログアウト処理
+	/* 管理者取得処理
 	 * 
 	 * @param session セッション値情報
 	 * @param redirectAttributes リダイレクト値情報
@@ -29,9 +33,8 @@ public class LogoutController {
 	 * 
 	 */
 	
-	@GetMapping("/manager/logout")
-	public String logout(HttpSession session, RedirectAttributes redirectAttributes) {
-		
+	@GetMapping("/manager/manager_get")
+	public String getManager(HttpSession session, RedirectAttributes redirectAttributes) {
 		
 		Integer loginId = (Integer)session.getAttribute("log_manager_id");
 		
@@ -41,19 +44,17 @@ public class LogoutController {
 			
 		}
 		
+
 		
-		session.removeAttribute("log_manager_id");
+		Manager managerInfo = service.getManagerById(loginId);
 		
-		session.removeAttribute("log_manager_name");
+		redirectAttributes.addFlashAttribute("manager", managerInfo);
 		
-		session.setAttribute("logout_result", "ログアウトしました");
+		return "redirect:/manager/manager_view";
 		
-		session.removeAttribute("login_result");
 		
-		return "redirect:/manager/login";
 		
 		
 	}
 	
-
 }

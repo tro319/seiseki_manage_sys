@@ -34,6 +34,22 @@ public class ManagerService {
 		return managerInfo;
 		
 	}
+	
+	
+	/* idからmanagerエンティティ1件を取得
+	 * 
+	 * @param id ログイン中の管理者id
+	 * @return managerエンティティ1件
+	 * 
+	 */
+	
+	public Manager getManagerById(Integer id) {
+		
+		Manager managerInfo = repository.findById(id).orElse(null);
+		
+		return managerInfo;
+		
+	}
 
 	
 }
