@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>教科更新画面 | 成績管理システム</title>
+<title>教科更新画面 | 授業クラス管理システム</title>
 
 <!-- CSS -->
 <link rel="stylesheet" th:href="@{/css/style.css}" />
@@ -78,6 +78,19 @@
 					<label for="kana">ふりがな</label>
 					
 					<input type="text" th:field="*{kana}" maxlength="50" required />
+					
+				</div>
+				
+				<div class="checkbox-label target-classes-label">
+					
+					<p>該当クラス選択</p>
+					
+				</div>
+
+				<div th:each="target : ${target_class_list">
+					
+					
+					<input type="checkbox" th:field="*{targetClassIds}" th:value="target.id" /><span th:text="${target.startYear + '年度入学' + target.major.name}"></span>
 					
 				</div>
 				

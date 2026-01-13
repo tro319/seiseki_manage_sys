@@ -1,12 +1,16 @@
 package com.example.demo.controller.view.manager;
 
+import java.util.List;
+
 import jakarta.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import com.example.demo.model.entity.ClassEntity;
 import com.example.demo.model.form.manager.SubjectRegisterForm;
+import com.example.demo.service.ClassService;
 
 import lombok.RequiredArgsConstructor;
 
@@ -20,6 +24,8 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 
 public class SubjectRegisterViewController {
+	
+	private final ClassService classService;
 
 	/* 教科登録フォーム表示処理
 	 * 
@@ -49,6 +55,10 @@ public class SubjectRegisterViewController {
 		}
 		
 		model.addAttribute("subject_register_data", subjectRegisterForm);
+		
+		List<ClassEntity> targetClasses = classService.getClasses();
+		
+		model.addAttribute("target_classes_list", targetClasses);
 		
 		return "manager/subject_register";
 		
