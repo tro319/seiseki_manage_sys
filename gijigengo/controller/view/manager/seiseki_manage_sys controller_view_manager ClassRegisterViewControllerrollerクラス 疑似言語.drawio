@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:146.0) Gecko/20100101 Firefox/146.0" version="29.2.9">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:147.0) Gecko/20100101 Firefox/147.0" version="29.3.2">
   <diagram name="ページ1" id="mb2iSDPSAOiip58z1rqg">
     <mxGraphModel grid="0" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -29,7 +29,7 @@
           <mxGeometry height="19.447287615148415" width="19.447287615148415" x="250.0007676560901" y="473.28" as="geometry" />
         </mxCell>
         <mxCell id="goKNVEA--qVVOXUjejYc-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="return &quot;manager/class_register&quot;" vertex="1">
-          <mxGeometry height="30" width="590" x="284" y="853" as="geometry" />
+          <mxGeometry height="30" width="590" x="284" y="912" as="geometry" />
         </mxCell>
         <mxCell id="DWkLMcCQ87NzLALwmXz8-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="classRegisterForm ← ClassRegisterFormクラスインスタンス作成" vertex="1">
           <mxGeometry height="30" width="590" x="303" y="740" as="geometry" />
@@ -41,19 +41,28 @@
           <mxGeometry height="30" width="590" x="288" y="671" as="geometry" />
         </mxCell>
         <mxCell id="KocRN-FOsr2IsZBUAbey-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="model[&quot;class_register_data&quot;] ← classRegisterForm" vertex="1">
-          <mxGeometry height="30" width="590" x="284" y="826" as="geometry" />
+          <mxGeometry height="30" width="590" x="284" y="885" as="geometry" />
         </mxCell>
         <mxCell id="macaz-z8YwSb21hIDMnH-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="model[&quot;major_all&quot;] ← majorAll" vertex="1">
-          <mxGeometry height="30" width="719.4722222222223" x="284" y="800" as="geometry" />
+          <mxGeometry height="30" width="719.4722222222223" x="284" y="832" as="geometry" />
         </mxCell>
-        <mxCell id="macaz-z8YwSb21hIDMnH-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="List&amp;lt;Major&amp;gt;型: majorAll ← service.専攻一覧取得()" vertex="1">
+        <mxCell id="macaz-z8YwSb21hIDMnH-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="List&amp;lt;Major&amp;gt;型: majorAll ← majorService.専攻一覧取得()" vertex="1">
           <mxGeometry height="30" width="719.4722222222223" x="284" y="779" as="geometry" />
         </mxCell>
         <mxCell id="cH8U5QYRYS4pVgr9YDZO-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;verticalAlign=top;fontSize=36;fontColor=#80708A;" value="&lt;font&gt;大域 field&lt;/font&gt;" vertex="1">
           <mxGeometry height="246" width="963" x="823" y="24" as="geometry" />
         </mxCell>
-        <mxCell id="cH8U5QYRYS4pVgr9YDZO-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="大域: ClassService型: service" vertex="1">
+        <mxCell id="cH8U5QYRYS4pVgr9YDZO-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="大域: MajorService型: majorService" vertex="1">
           <mxGeometry height="30" width="590" x="1001" y="126" as="geometry" />
+        </mxCell>
+        <mxCell id="SjFBS1EMkTcIaSdBYYau-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="大域: SubjectService型: subjectService" vertex="1">
+          <mxGeometry height="30" width="590" x="1003.47" y="146" as="geometry" />
+        </mxCell>
+        <mxCell id="SjFBS1EMkTcIaSdBYYau-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="List&amp;lt;Subject&amp;gt;型: subjectAll ← subjectService.教科一覧取得()" vertex="1">
+          <mxGeometry height="30" width="719.4722222222223" x="286" y="803" as="geometry" />
+        </mxCell>
+        <mxCell id="SjFBS1EMkTcIaSdBYYau-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="model[&quot;subject_all&quot;] ← subjectAll" vertex="1">
+          <mxGeometry height="30" width="719.4722222222223" x="284" y="855" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

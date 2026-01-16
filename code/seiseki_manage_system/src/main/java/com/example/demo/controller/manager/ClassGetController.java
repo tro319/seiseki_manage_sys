@@ -1,5 +1,7 @@
 package com.example.demo.controller.manager;
 
+import java.util.List;
+
 import jakarta.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
@@ -8,7 +10,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.example.demo.model.entity.ClassEntity;
+import com.example.demo.model.entity.ClassSubject;
 import com.example.demo.service.ClassService;
+import com.example.demo.service.ClassSubjectService;
 
 import lombok.RequiredArgsConstructor;
 
@@ -25,6 +29,8 @@ public class ClassGetController {
 	
 	
 	private final ClassService service;
+	
+	private final ClassSubjectService classSubjectService;
 
 	/* クラス取得処理
 	 * 
@@ -56,6 +62,8 @@ public class ClassGetController {
 		
 		String registerResult = (String)session.getAttribute("class_register_result");
 		
+		List<ClassSubject> classSubjectsInfo = null;
+		
 		
 		if (classInfo != null && registerResult != null) {
 			
@@ -84,9 +92,18 @@ public class ClassGetController {
 			}
 			
 			classInfo = service.getClassById(classId);
+		
 			
-			redirectAttributes.addFlashAttribute("class_info", classInfo);
+
+		}
+		
+		classSubjectsInfo = classSubjectService.getClassSubjects(classId);
+		
+		redirectAttributes.addFlashAttribute("class_info", classInfo);
+		
+		if (classSubjectsInfo != null) {
 			
+			redirectAttributes.addFlashAttribute("class_subjects", classSubjectsInfo);
 			
 		}
 		

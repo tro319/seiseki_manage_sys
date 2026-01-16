@@ -77,6 +77,111 @@
 					
 				</div>
 				
+				<div>
+					
+					<label for="subjectNameOne">該当教科1</label>
+					
+					<select th:field="*{subjectNameOne}" required>
+						
+						<option value=""></option>
+						
+						<option th:each="subject : ${subject_all}" th:value="${subject.name}" th:text="${subject.name}"></option>
+						
+					</select>
+
+					
+				</div>
+				
+				<div>
+					
+					<label for="subjectNameTwo">該当教科2</label>
+					
+					<select th:field="*{subjectNameTwo}" required>
+						
+						<option value=""></option>
+						
+						<option th:each="subject : ${subject_all}" th:value="${subject.name}" th:text="${subject.name}"></option>
+						
+					</select>
+
+					
+				</div>
+				
+				<div>
+					
+					<label for="subjectNameThree">該当教科3</label>
+					
+					<select th:field="*{subjectNameThree}" required>
+						
+						<option value=""></option>
+						
+						<option th:each="subject : ${subject_all}" th:value="${subject.name}" th:text="${subject.name}"></option>
+						
+					</select>
+
+					
+				</div>
+				
+				<div>
+					
+					<label for="subjectNameFour">該当教科4</label>
+					
+					<select th:field="*{subjectNameFour}">
+						
+						<option value=""></option>
+						
+						<option th:each="subject : ${subject_all}" th:value="${subject.name}" th:text="${subject.name}"></option>
+						
+					</select>
+
+					
+				</div>
+				
+				<div>
+					
+					<label for="subjectNameFive">該当教科5</label>
+					
+					<select th:field="*{subjectNameFive}">
+						
+						<option value=""></option>
+						
+						<option th:each="subject : ${subject_all}" th:value="${subject.name}" th:text="${subject.name}"></option>
+						
+					</select>
+
+					
+				</div>
+				
+				<div>
+					
+					<label for="subjectNameSix">該当教科6</label>
+					
+					<select th:field="*{subjectNameSix}">
+						
+						<option value=""></option>
+						
+						<option th:each="subject : ${subject_all}" th:value="${subject.name}" th:text="${subject.name}"></option>
+						
+					</select>
+
+					
+				</div>
+				
+				<div>
+					
+					<label for="subjectNameSeven">該当教科7</label>
+					
+					<select th:field="*{subjectNameSeven}">
+						
+						<option value=""></option>
+						
+						<option th:each="subject : ${subject_all}" th:value="${subject.name}" th:text="${subject.name}"></option>
+						
+					</select>
+
+					
+				</div>
+				
 				<div class="submit-btns">
 					
 					<input type="submit" value="登録" />
@@ -85,6 +190,7 @@
 				
 				
 			</form>
+		
 			
 			
 		</div>

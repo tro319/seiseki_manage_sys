@@ -1,44 +1,43 @@
 package com.example.demo.model.entity;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.PreUpdate;
 import jakarta.persistence.Table;
 
 import lombok.Data;
-import lombok.ToString;
 
 @Entity
 @Data
-@Table(name="majors")
+@Table(name="class_subjects")
 
-public class Major {
+public class ClassSubject {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
-	private String name;
+	@ManyToOne
+	@JoinColumn(name="class_id")
+	private ClassEntity classEntity;
 	
-	private String kana;
-	
-	@OneToMany(mappedBy="major", cascade=CascadeType.ALL)
-	@ToString.Exclude
-	private List<ClassEntity> classes;
+	@ManyToOne
+	@JoinColumn(name="subject_id")
+	private Subject subject;
 	
 	@ManyToOne
 	@JoinColumn(name="manager_id")
 	private Manager manager;
+	
+
+
 	
 	
 	private LocalDateTime createdAt;

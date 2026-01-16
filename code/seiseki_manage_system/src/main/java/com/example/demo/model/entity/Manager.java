@@ -1,16 +1,20 @@
 package com.example.demo.model.entity;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.PreUpdate;
 import jakarta.persistence.Table;
 
 import lombok.Data;
+import lombok.ToString;
 
 /* Managerクラス (managersテーブルと紐ずくエンティティ)
  * 
@@ -48,23 +52,27 @@ public class Manager {
 //	@OneToMany(mappedBy="manager", cascade=CascadeType.ALL)
 //	private List<Teacher> teachers;
 //	
-//	@OneToMany(mappedBy="manager", cascade=CascadeType.ALL)
-//	private List<Class> classes;
-//	
-//	@OneToMany(mappedBy="manager", cascade=CascadeType.ALL)
-//	private List<Subject> subjects;
-//	
-//	@OneToMany(mappedBy="manager", cascade=CascadeType.ALL)
-//	private List<Major> majors;
-//	
+	@OneToMany(mappedBy="manager", cascade=CascadeType.ALL)
+	@ToString.Exclude
+	private List<ClassEntity> classes;
+	
+	@OneToMany(mappedBy="manager", cascade=CascadeType.ALL)
+	@ToString.Exclude
+	private List<Subject> subjects;
+	
+	@OneToMany(mappedBy="manager", cascade=CascadeType.ALL)
+	@ToString.Exclude
+	private List<Major> majors;
+	
 //	@OneToMany(mappedBy="manager", cascade=CascadeType.ALL)
 //	private List<Period> periods;
-//	
+	
 //	@OneToMany(mappedBy="manager", cascade=CascadeType.ALL)
 //	private List<TeacherSubject> teacherSubjects;
-//	
-//	@OneToMany(mappedBy="manager", cascade=CascadeType.ALL)
-//	private List<ClassSubject> classSubjects;
+	
+	@OneToMany(mappedBy="manager", cascade=CascadeType.ALL)
+	@ToString.Exclude
+	private List<ClassSubject> classSubjects;
 	
 	
 	
