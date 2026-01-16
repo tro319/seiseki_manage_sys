@@ -97,7 +97,7 @@ public class ClassGetController {
 
 		}
 		
-		classSubjectsInfo = classSubjectService.getClassSubjects(classId);
+		classSubjectsInfo = classSubjectService.getClassSubjectsByClassId(classId);
 		
 		redirectAttributes.addFlashAttribute("class_info", classInfo);
 		

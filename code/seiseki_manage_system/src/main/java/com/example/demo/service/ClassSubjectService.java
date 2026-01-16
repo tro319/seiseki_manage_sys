@@ -44,7 +44,7 @@ public class ClassSubjectService {
 	 * 
 	 */
 	
-	public List<ClassSubject> getClassSubjects(Integer classId) {
+	public List<ClassSubject> getClassSubjectsByClassId(Integer classId) {
 		
 		List<ClassSubject> classSubjectsInfo = repository.findAll();
 		

@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.41, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.40, for Win64 (x86_64)
 --
 -- Host: localhost    Database: seiseki_manage_sys
 -- ------------------------------------------------------
--- Server version	8.0.41
+-- Server version	8.0.40
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -36,7 +36,7 @@ CREATE TABLE `class_subjects` (
   CONSTRAINT `class_subjects_ibfk_1` FOREIGN KEY (`manager_id`) REFERENCES `managers` (`id`),
   CONSTRAINT `class_subjects_ibfk_2` FOREIGN KEY (`class_id`) REFERENCES `classes` (`id`),
   CONSTRAINT `class_subjects_ibfk_3` FOREIGN KEY (`subject_id`) REFERENCES `subjects` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=52 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -45,7 +45,7 @@ CREATE TABLE `class_subjects` (
 
 LOCK TABLES `class_subjects` WRITE;
 /*!40000 ALTER TABLE `class_subjects` DISABLE KEYS */;
-INSERT INTO `class_subjects` VALUES (18,13,1,1,'2026-01-16 18:43:33','2026-01-16 18:43:33'),(19,13,3,1,'2026-01-16 18:43:33','2026-01-16 18:43:33'),(20,13,4,1,'2026-01-16 18:43:33','2026-01-16 18:43:33'),(21,13,6,1,'2026-01-16 18:43:33','2026-01-16 18:43:33'),(22,13,7,1,'2026-01-16 18:43:33','2026-01-16 18:43:33'),(23,13,8,1,'2026-01-16 18:43:33','2026-01-16 18:43:33'),(24,13,9,1,'2026-01-16 18:43:33','2026-01-16 18:43:33'),(32,15,1,1,'2026-01-16 18:52:50','2026-01-16 18:52:50'),(33,15,5,1,'2026-01-16 18:52:50','2026-01-16 18:52:50'),(34,15,7,1,'2026-01-16 18:52:50','2026-01-16 18:52:50'),(35,15,6,1,'2026-01-16 18:52:50','2026-01-16 18:52:50'),(36,15,4,1,'2026-01-16 18:52:50','2026-01-16 18:52:50'),(37,15,3,1,'2026-01-16 18:52:50','2026-01-16 18:52:50'),(38,15,9,1,'2026-01-16 18:52:50','2026-01-16 18:52:50'),(39,16,1,1,'2026-01-16 18:56:33','2026-01-16 18:56:33'),(40,16,3,1,'2026-01-16 18:56:33','2026-01-16 18:56:33'),(41,16,4,1,'2026-01-16 18:56:33','2026-01-16 18:56:33'),(42,16,5,1,'2026-01-16 18:56:33','2026-01-16 18:56:33'),(43,16,6,1,'2026-01-16 18:56:33','2026-01-16 18:56:33'),(44,16,7,1,'2026-01-16 18:56:33','2026-01-16 18:56:33'),(45,16,8,1,'2026-01-16 18:56:33','2026-01-16 18:56:33'),(49,18,10,1,'2026-01-16 19:38:50','2026-01-16 19:38:50'),(50,18,7,1,'2026-01-16 19:38:50','2026-01-16 19:38:50'),(51,18,5,1,'2026-01-16 19:38:50','2026-01-16 19:38:50');
+INSERT INTO `class_subjects` VALUES (1,4,2,1,'2026-01-16 21:53:07','2026-01-16 21:53:07'),(2,4,3,1,'2026-01-16 21:53:07','2026-01-16 21:53:07'),(3,4,6,1,'2026-01-16 21:53:07','2026-01-16 21:53:07'),(4,4,8,1,'2026-01-16 21:53:07','2026-01-16 21:53:07'),(8,6,4,1,'2026-01-16 21:55:18','2026-01-16 21:55:18'),(9,6,5,1,'2026-01-16 21:55:18','2026-01-16 21:55:18'),(10,6,13,1,'2026-01-16 21:55:19','2026-01-16 21:55:19'),(11,7,7,1,'2026-01-16 21:58:01','2026-01-16 21:58:01'),(12,7,15,1,'2026-01-16 21:58:01','2026-01-16 21:58:01'),(13,7,14,1,'2026-01-16 21:58:01','2026-01-16 21:58:01'),(18,9,6,1,'2026-01-16 22:01:06','2026-01-16 22:01:06'),(19,9,10,1,'2026-01-16 22:01:06','2026-01-16 22:01:06'),(20,9,9,1,'2026-01-16 22:01:06','2026-01-16 22:01:06'),(21,10,12,1,'2026-01-16 22:02:01','2026-01-16 22:02:01'),(22,10,14,1,'2026-01-16 22:02:01','2026-01-16 22:02:01'),(23,10,16,1,'2026-01-16 22:02:01','2026-01-16 22:02:01'),(24,11,17,1,'2026-01-16 22:03:46','2026-01-16 22:03:46'),(25,11,15,1,'2026-01-16 22:03:46','2026-01-16 22:03:46'),(26,11,11,1,'2026-01-16 22:03:46','2026-01-16 22:03:46');
 /*!40000 ALTER TABLE `class_subjects` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -68,7 +68,7 @@ CREATE TABLE `classes` (
   KEY `major_id` (`major_id`),
   CONSTRAINT `classes_ibfk_1` FOREIGN KEY (`manager_id`) REFERENCES `managers` (`id`),
   CONSTRAINT `classes_ibfk_2` FOREIGN KEY (`major_id`) REFERENCES `majors` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -77,7 +77,7 @@ CREATE TABLE `classes` (
 
 LOCK TABLES `classes` WRITE;
 /*!40000 ALTER TABLE `classes` DISABLE KEYS */;
-INSERT INTO `classes` VALUES (13,2024,6,1,'2026-01-16 18:43:33','2026-01-16 18:43:33'),(15,2025,6,1,'2026-01-16 18:52:50','2026-01-16 18:52:50'),(16,2023,6,1,'2026-01-16 18:56:33','2026-01-16 18:56:33'),(18,2023,9,1,'2026-01-16 19:38:50','2026-01-16 19:38:50');
+INSERT INTO `classes` VALUES (4,2025,1,1,'2026-01-16 21:53:07','2026-01-16 21:53:37'),(6,2023,1,1,'2026-01-16 21:55:18','2026-01-16 21:55:18'),(7,2024,1,1,'2026-01-16 21:58:01','2026-01-16 21:58:01'),(9,2025,6,1,'2026-01-16 22:01:06','2026-01-16 22:01:06'),(10,2024,6,1,'2026-01-16 22:02:01','2026-01-16 22:02:01'),(11,2023,6,1,'2026-01-16 22:03:46','2026-01-16 22:03:46');
 /*!40000 ALTER TABLE `classes` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -99,7 +99,7 @@ CREATE TABLE `majors` (
   UNIQUE KEY `name` (`name`),
   KEY `manager_id` (`manager_id`),
   CONSTRAINT `majors_ibfk_1` FOREIGN KEY (`manager_id`) REFERENCES `managers` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -108,7 +108,7 @@ CREATE TABLE `majors` (
 
 LOCK TABLES `majors` WRITE;
 /*!40000 ALTER TABLE `majors` DISABLE KEYS */;
-INSERT INTO `majors` VALUES (2,'ゲームクリエイター','げーむくりえいたー',1,'2025-12-19 15:54:25','2026-01-16 18:42:25'),(6,'ITプログラマー','ITぷろぐらまー',1,'2025-12-19 17:26:08','2026-01-16 18:42:38'),(7,'プロゲーマー','ぷろげーまー',1,'2026-01-09 17:33:46','2026-01-16 18:42:49'),(8,'CGクリエイター','CGくりえいたー',1,'2026-01-16 17:31:53','2026-01-16 17:31:53'),(9,'UI/UX','UI/UX',1,'2026-01-16 17:40:27','2026-01-16 17:40:27');
+INSERT INTO `majors` VALUES (1,'ITプログラマー専攻','ITプログラマーせんこう',1,'2025-12-19 15:27:59','2025-12-19 15:27:59'),(6,'UI  / UX','UI  / UX',1,'2026-01-16 21:58:53','2026-01-16 21:58:53');
 /*!40000 ALTER TABLE `majors` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -268,7 +268,7 @@ CREATE TABLE `subjects` (
   UNIQUE KEY `name` (`name`),
   KEY `manager_id` (`manager_id`),
   CONSTRAINT `subjects_ibfk_1` FOREIGN KEY (`manager_id`) REFERENCES `managers` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -277,7 +277,7 @@ CREATE TABLE `subjects` (
 
 LOCK TABLES `subjects` WRITE;
 /*!40000 ALTER TABLE `subjects` DISABLE KEYS */;
-INSERT INTO `subjects` VALUES (1,'Spring','Spring',1,'2026-01-09 17:01:36','2026-01-16 16:48:15'),(3,'Python','Python',1,'2026-01-16 16:44:23','2026-01-16 16:47:56'),(4,'C言語','Cげんご',1,'2026-01-16 16:46:34','2026-01-16 16:47:45'),(5,'Unity','Unity',1,'2026-01-16 16:47:01','2026-01-16 16:47:01'),(6,'Laravel','Laravel',1,'2026-01-16 16:47:16','2026-01-16 16:47:16'),(7,'Webフロント','Webふろんと',1,'2026-01-16 16:48:44','2026-01-16 18:50:50'),(8,'Linux','Linux',1,'2026-01-16 16:48:59','2026-01-16 16:48:59'),(9,'aws','aws',1,'2026-01-16 16:49:10','2026-01-16 16:49:10'),(10,'Adobe Photoshop/Illustrator','Adobe Photoshop/Illustrator',1,'2026-01-16 19:37:30','2026-01-16 19:37:30');
+INSERT INTO `subjects` VALUES (2,'Java','Java',1,'2025-12-21 17:36:23','2026-01-16 21:47:34'),(3,'PHP','PHP',1,'2026-01-16 21:47:53','2026-01-16 21:47:53'),(4,'PHP Laravel','PHP Laravel',1,'2026-01-16 21:48:09','2026-01-16 21:48:09'),(5,'Java Spring','Java Spring',1,'2026-01-16 21:48:28','2026-01-16 21:48:28'),(6,'Webフロント','Webふろんと',1,'2026-01-16 21:48:49','2026-01-16 21:48:49'),(7,'Python','Python',1,'2026-01-16 21:49:02','2026-01-16 21:49:02'),(8,'C','C',1,'2026-01-16 21:49:09','2026-01-16 21:49:09'),(9,'デッサン','でっさん',1,'2026-01-16 21:49:32','2026-01-16 21:49:40'),(10,'Adobe Photoshop / Illustrator',' Adobe Photoshop / Illustrator',1,'2026-01-16 21:50:16','2026-01-16 21:50:16'),(11,'Adobe AfterEffects','Adobe AfterEffects',1,'2026-01-16 21:50:51','2026-01-16 21:50:51'),(12,'映像撮影 / 動画編集','えいぞうさつえい / どうがへんしゅう  ',1,'2026-01-16 21:51:48','2026-01-16 21:52:10'),(13,'Python Django','Python Django',1,'2026-01-16 21:54:48','2026-01-16 21:54:48'),(14,'Unity','Unity',1,'2026-01-16 21:56:32','2026-01-16 21:56:32'),(15,'Nuxt','Nuxt',1,'2026-01-16 21:57:30','2026-01-16 21:57:30'),(16,'UI / UX 基礎','UI / UX きそ',1,'2026-01-16 22:00:22','2026-01-16 22:00:22'),(17,'ADデザイン','ADでざいん',1,'2026-01-16 22:03:22','2026-01-16 22:03:22');
 /*!40000 ALTER TABLE `subjects` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -363,4 +363,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-01-16 19:42:45
+-- Dump completed on 2026-01-16 22:39:22

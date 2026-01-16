@@ -81,18 +81,7 @@
 					
 				</div>
 				
-				<div class="checkbox-label target-classes-label">
-					
-					<p>該当クラス選択</p>
-					
-				</div>
 
-				<div th:each="target : ${target_class_list">
-					
-					
-					<input type="checkbox" th:field="*{targetClassIds}" th:value="target.id" /><span th:text="${target.startYear + '年度入学' + target.major.name}"></span>
-					
-				</div>
 				
 				<div class="submit-btns">
 					
