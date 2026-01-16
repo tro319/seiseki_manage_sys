@@ -4,7 +4,7 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="y_rmSiP4a9WrNTzO88O2-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=#6c8ebf;fillColor=#dae8fc;align=center;verticalAlign=middle;rounded=0;fontSize=36;" value="&lt;div&gt;&lt;span style=&quot;color: rgb(0, 161, 255);&quot;&gt;class&lt;/span&gt;&lt;/div&gt;&lt;div&gt;クラス更新フォーム&amp;nbsp;&lt;/div&gt;" vertex="1">
+        <mxCell id="y_rmSiP4a9WrNTzO88O2-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=#6c8ebf;fillColor=#dae8fc;align=center;verticalAlign=middle;rounded=0;fontSize=36;" value="&lt;div&gt;&lt;span style=&quot;color: rgb(0, 161, 255);&quot;&gt;class&lt;/span&gt;&lt;/div&gt;&lt;div&gt;クラスの教科追加フォーム&amp;nbsp;&lt;/div&gt;" vertex="1">
           <mxGeometry height="149" width="471" x="39" y="41" as="geometry" />
         </mxCell>
         <mxCell id="y_rmSiP4a9WrNTzO88O2-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=#6c8ebf;fillColor=light-dark(#daeece, #214210);align=center;verticalAlign=top;rounded=0;fontSize=36;fontColor=#00A1FF;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="&lt;div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;span style=&quot;color: rgb(50, 182, 49);&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;span&gt;method&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;span style=&quot;color: rgba(0, 0, 0, 0);&quot;&gt;&lt;span style=&quot;color: rgba(0, 0, 0, 0);&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
@@ -19,32 +19,14 @@
         <mxCell id="S7X8e83eDEx1BtPf0ie4-10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;verticalAlign=top;fontSize=36;fontColor=#80708A;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="&lt;font&gt;大域 field&lt;/font&gt;" vertex="1">
           <mxGeometry height="378" width="963" x="1151" y="41" as="geometry" />
         </mxCell>
-        <mxCell id="S7X8e83eDEx1BtPf0ie4-11" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="大域: 数値型: startYear" vertex="1">
+        <mxCell id="S7X8e83eDEx1BtPf0ie4-11" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="大域: 数値型: classId" vertex="1">
           <mxGeometry height="30" width="590" x="1268" y="111" as="geometry" />
         </mxCell>
-        <mxCell id="NC2p8tmlkI6qg-qhVgj8-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="大域: 文字列型: majorName" vertex="1">
-          <mxGeometry height="30" width="590" x="1268" y="129" as="geometry" />
+        <mxCell id="rhiZPkx889OkQOc0GiNh-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="大域: 数値型: subjectId" vertex="1">
+          <mxGeometry height="30" width="590" x="1270" y="133" as="geometry" />
         </mxCell>
-        <mxCell id="kCjYJT4653l0xLbR9qhC-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="大域: 文字列型: subjectNameOne" vertex="1">
-          <mxGeometry height="30" width="590" x="1268" y="151" as="geometry" />
-        </mxCell>
-        <mxCell id="kCjYJT4653l0xLbR9qhC-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="大域: 文字列型: subjectNameTwo" vertex="1">
-          <mxGeometry height="30" width="590" x="1268" y="175" as="geometry" />
-        </mxCell>
-        <mxCell id="kCjYJT4653l0xLbR9qhC-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="大域: 文字列型: subjectNameThree" vertex="1">
-          <mxGeometry height="30" width="590" x="1268" y="194" as="geometry" />
-        </mxCell>
-        <mxCell id="kCjYJT4653l0xLbR9qhC-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="大域: 文字列型: subjectNameFour" vertex="1">
-          <mxGeometry height="30" width="590" x="1268" y="213" as="geometry" />
-        </mxCell>
-        <mxCell id="kCjYJT4653l0xLbR9qhC-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="大域: 文字列型: subjectNameFive" vertex="1">
-          <mxGeometry height="30" width="590" x="1268" y="233" as="geometry" />
-        </mxCell>
-        <mxCell id="kCjYJT4653l0xLbR9qhC-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="大域: 文字列型: subjectNameSix" vertex="1">
-          <mxGeometry height="30" width="590" x="1268" y="256" as="geometry" />
-        </mxCell>
-        <mxCell id="kCjYJT4653l0xLbR9qhC-7" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="大域: 文字列型: subjectNameSeven" vertex="1">
-          <mxGeometry height="30" width="590" x="1268" y="276" as="geometry" />
+        <mxCell id="rhiZPkx889OkQOc0GiNh-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="大域: 数値型: managerId" vertex="1">
+          <mxGeometry height="30" width="590" x="1270" y="151" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

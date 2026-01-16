@@ -9,8 +9,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import com.example.demo.model.entity.Major;
+import com.example.demo.model.entity.Subject;
 import com.example.demo.model.form.manager.ClassRegisterForm;
-import com.example.demo.service.ClassService;
+import com.example.demo.service.MajorService;
+import com.example.demo.service.SubjectService;
 
 import lombok.RequiredArgsConstructor;
 
@@ -25,7 +27,9 @@ import lombok.RequiredArgsConstructor;
 
 public class ClassRegisterViewController {
 	
-	private final ClassService service;
+	private final MajorService majorService;
+	
+	private final SubjectService subjectService;
 
 	/* クラス登録フォーム表示処理
 	 * 
@@ -54,9 +58,13 @@ public class ClassRegisterViewController {
 		
 		}
 		
-		List<Major> majorAll = service.getMajors();
+		List<Major> majorAll = majorService.getMajors();
+		
+		List<Subject> subjectAll = subjectService.getSubjects();
 		
 		model.addAttribute("major_all", majorAll);
+		
+		model.addAttribute("subject_all", subjectAll);
 		
 		model.addAttribute("class_register_data", classRegisterForm);
 		

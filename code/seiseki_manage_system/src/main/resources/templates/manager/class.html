@@ -86,15 +86,87 @@
 				
 			</table>
 			
-			<div class="edit-links">
+			
+	</div>
+	
+	
+	
+	
+	
+	
+
+	<div class="page-main-tops">
+		
+		<div class="sub-title">
+			
+			<h2>該当教科一覧</h2>
+			
+		</div>		
+
+	</div>
+	
+	
+	
+	<div class="container">
+			
+		<div class="border-table-cover">
+			
+			<table class="table border-on class-subject-table">
 				
-				<a th:href="@{/manager/class_update(id=${class_info.id})}">更新</a>
-				<a th:href="@{/manager/class_delete(id=${class_info.id})}" onclick="return confirm('本当に削除しますか?');">削除</a>
+				<thead>
+					
+					<tr>
+						
+						<th>教科名</th>
+						
+						<th>ふりがな</th>
+						
+						<th>最終更新者</th>
+						
+						<th>最終更新日時</th>
+						
+						
+						
+					</tr>
+					
+					
+				</thead>
 				
-			</div>
+				<tbody>
+					
+					<tr th:each="class_subject : ${class_subjects}">
+						
+						<td th:text="${class_subject.subject.name}"></td>
+						
+						<td th:text="${class_subject.subject.kana}"></td>
+						
+						<td th:text="${class_subject.manager.name}"></td>
+						
+						<td th:text="${#temporals.format(class_subject.updatedAt, 'yyyy年MM月dd日 HH時')}"></td>
+						
+					</tr>
+					
+					
+					
+				</tbody>
+				
+				
+			</table>
 			
 			
 		</div>
+		
+		
+		
+		<div class="edit-links">
+			
+			<a th:href="@{/manager/class_update(id=${class_info.id})}">更新</a>
+			<a th:href="@{/manager/class_delete(id=${class_info.id})}" onclick="return confirm('本当に削除しますか?');">削除</a>
+			
+		</div>
+			
+			
+	   </div>
 		
 	</main>
 	

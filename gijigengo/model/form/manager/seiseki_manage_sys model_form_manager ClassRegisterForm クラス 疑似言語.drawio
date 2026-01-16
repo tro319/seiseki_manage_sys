@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:146.0) Gecko/20100101 Firefox/146.0" version="29.2.9">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:147.0) Gecko/20100101 Firefox/147.0" version="29.3.2">
   <diagram name="ページ1" id="mb2iSDPSAOiip58z1rqg">
     <mxGraphModel grid="0" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -24,6 +24,27 @@
         </mxCell>
         <mxCell id="NC2p8tmlkI6qg-qhVgj8-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="大域: 文字列型: majorName" vertex="1">
           <mxGeometry height="30" width="590" x="1268" y="129" as="geometry" />
+        </mxCell>
+        <mxCell id="zz441VENDZFgYc06Xdfw-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="大域: 文字列型: subjectNameOne" vertex="1">
+          <mxGeometry height="30" width="590" x="1268" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="zz441VENDZFgYc06Xdfw-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="大域: 文字列型: subjectNameTwo" vertex="1">
+          <mxGeometry height="30" width="590" x="1268" y="174" as="geometry" />
+        </mxCell>
+        <mxCell id="zz441VENDZFgYc06Xdfw-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="大域: 文字列型: subjectNameThree" vertex="1">
+          <mxGeometry height="30" width="590" x="1268" y="193" as="geometry" />
+        </mxCell>
+        <mxCell id="zz441VENDZFgYc06Xdfw-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="大域: 文字列型: subjectNameFour" vertex="1">
+          <mxGeometry height="30" width="590" x="1268" y="212" as="geometry" />
+        </mxCell>
+        <mxCell id="zz441VENDZFgYc06Xdfw-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="大域: 文字列型: subjectNameFive" vertex="1">
+          <mxGeometry height="30" width="590" x="1268" y="232" as="geometry" />
+        </mxCell>
+        <mxCell id="zz441VENDZFgYc06Xdfw-7" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="大域: 文字列型: subjectNameSix" vertex="1">
+          <mxGeometry height="30" width="590" x="1268" y="255" as="geometry" />
+        </mxCell>
+        <mxCell id="zz441VENDZFgYc06Xdfw-8" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="大域: 文字列型: subjectNameSeven" vertex="1">
+          <mxGeometry height="30" width="590" x="1268" y="275" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

@@ -15,5 +15,19 @@ public class ClassSetForm {
 	private Integer startYear;
 	
 	private String majorName;
+	
+	private String subjectNameOne;
+	
+	private String subjectNameTwo;
+
+	private String subjectNameThree;
+	
+	private String subjectNameFour;
+	
+	private String subjectNameFive;
+	
+	private String subjectNameSix;
+	
+	private String subjectNameSeven;
 
 }
