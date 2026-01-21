@@ -22,3 +22,38 @@ links.forEach(function(link) {
 		
 	});
 });
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const selects = document.querySelectorAll(".subject-select");
+
+    function updateOptions() {
+
+        const selectedValues = Array.from(selects)
+            .map(s => s.value)
+            .filter(v => v !== "");
+
+
+        selects.forEach(select => {
+            const currentValue = select.value;
+
+            Array.from(select.options).forEach(option => {
+                if (option.value === "") return;
+
+                
+                if (selectedValues.includes(option.value) && option.value !== currentValue) {
+                    option.disabled = true;
+                } else {
+                    option.disabled = false;
+                }
+            });
+        });
+    }
+
+
+    selects.forEach(select => {
+        select.addEventListener("change", updateOptions);
+    });
+});
+
