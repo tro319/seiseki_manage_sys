@@ -160,6 +160,8 @@
 		
 		<div class="edit-links">
 			
+			<a th:href="@{/manager/class_update(id=${class_info.id})}">更新</a>
+			
 			<a th:href="@{/manager/class_delete(id=${class_info.id})}" onclick="return confirm('本当に削除しますか?');">削除</a>
 			
 		</div>

@@ -115,5 +115,42 @@ public class ClassSubjectService {
 	}
 	
 	
+	/* クラス教科追加用フォーム入力情報からクラス教科エンティティ1件を更新
+	 * 
+	 * @param form クラス教科追加用フォーム入力情報
+	 * 
+	 * @return 追加されたクラス教科エンティティ1件
+	 * 
+	 */
+	
+	public ClassSubject setClassSubject(ClassSubjectAddForm form) {
+		
+		ClassSubject classSubjectInfo = new ClassSubject();
+
+		
+		ClassEntity classInfo = classService.getClassById(form.getClassId());
+		
+		Manager managerInfo = managerService.getManagerById(form.getManagerId());
+		
+		Subject subjectInfo = subjectService.getSubjectById(form.getSubjectId());
+		
+		classSubjectInfo.setClassEntity(classInfo);
+		
+		classSubjectInfo.setManager(managerInfo);
+		
+		classSubjectInfo.setSubject(subjectInfo);
+		
+
+		return repository.save(classSubjectInfo);
+		
+		
+	}
 
 }
+
+
+
+
+
+
+
