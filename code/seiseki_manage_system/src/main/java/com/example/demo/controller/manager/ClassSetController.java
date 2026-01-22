@@ -15,12 +15,14 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.example.demo.model.entity.ClassEntity;
 import com.example.demo.model.entity.ClassSubject;
+import com.example.demo.model.entity.Major;
 import com.example.demo.model.entity.Manager;
 import com.example.demo.model.entity.Subject;
 import com.example.demo.model.form.manager.ClassSetForm;
 import com.example.demo.model.form.manager.ClassSubjectAddForm;
 import com.example.demo.service.ClassService;
 import com.example.demo.service.ClassSubjectService;
+import com.example.demo.service.MajorService;
 import com.example.demo.service.ManagerService;
 import com.example.demo.service.SubjectService;
 
@@ -45,6 +47,9 @@ public class ClassSetController {
 	private final ManagerService managerService;
 	
 	private final ClassSubjectService classSubjectService;
+	
+	private final MajorService majorService;
+	
 	
 	
 	/* クラス取得処理
@@ -106,13 +111,66 @@ public class ClassSetController {
 		
 		setForm.setMajorName(classInfo.getMajor().getName());
 		
-		redirectAttributes.addFlashAttribute("class_set_data", setForm);
-		
-		if (subjectsInfo != null) {
+		for (int i = 0; i < subjectsInfo.size(); i++) {
 			
-			redirectAttributes.addFlashAttribute("subject_all", subjectsInfo);
+			switch (i) {
+			
+				case 0:
+					
+					setForm.setSubjectNameOne(subjectsInfo.get(i).getName());
+					break;
+					
+				case 1:
+					
+					setForm.setSubjectNameTwo(subjectsInfo.get(i).getName());
+					break;				
+					
+				case 2:
+					
+					setForm.setSubjectNameThree(subjectsInfo.get(i).getName());
+					break;			
+					
+				case 3:
+					
+					setForm.setSubjectNameFour(subjectsInfo.get(i).getName());
+					break;
+					
+				case 4:
+					
+					setForm.setSubjectNameFive(subjectsInfo.get(i).getName());
+					break;
+					
+				case 5:
+					
+					setForm.setSubjectNameSix(subjectsInfo.get(i).getName());
+					break;
+					
+				case 6:
+					
+					setForm.setSubjectNameSeven(subjectsInfo.get(i).getName());
+					break;
+			
+			
+			}
+			
+			
 			
 		}
+		
+		
+		
+		redirectAttributes.addFlashAttribute("class_set_data", setForm);
+			
+		
+		
+		
+		List<Major> majorAll = majorService.getMajors();
+		
+		List<Subject> subjectAll = subjectService.getSubjects();
+		
+		redirectAttributes.addFlashAttribute("major_all", majorAll);
+		
+		redirectAttributes.addFlashAttribute("subject_all", subjectAll);
 		
 		
 		
