@@ -53,6 +53,7 @@ public class ClassSetViewController {
 		if (!model.containsAttribute("class_set_data")) {
 			
 			Integer classId = (Integer)session.getAttribute("class_set_id");
+
 				
 			if (classId > 0) {
 				

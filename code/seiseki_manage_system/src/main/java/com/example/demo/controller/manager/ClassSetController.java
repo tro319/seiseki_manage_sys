@@ -1,7 +1,9 @@
 package com.example.demo.controller.manager;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import jakarta.servlet.http.HttpSession;
 
@@ -13,7 +15,6 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.example.demo.model.entity.ClassEntity;
 import com.example.demo.model.entity.ClassSubject;
-import com.example.demo.model.entity.Major;
 import com.example.demo.model.entity.Manager;
 import com.example.demo.model.entity.Subject;
 import com.example.demo.model.form.manager.ClassSetForm;
@@ -67,7 +68,6 @@ public class ClassSetController {
 		}
 		
 		if (id <= 0) {
-			
 			return "redirect:/manager/classes";
 			
 		}
@@ -97,6 +97,8 @@ public class ClassSetController {
 			
 			
 		}
+		
+		System.out.println(subjectsInfo);
 		
 		ClassSetForm setForm = new ClassSetForm();
 		
@@ -164,11 +166,41 @@ public class ClassSetController {
 		}
 		
 		
-		Major majorInfo = service.getMajorByName(form.getMajorName());
+		ClassEntity classInfo = service.getClassById(classId);
 		
-		Integer majorId = (Integer)majorInfo.getId();
+		Map<String, String> updates = new HashMap<>();
 		
-		ClassEntity classInfo = service.setClass(form, loginId, majorId, classId);
+		
+		if (classInfo != null) {
+			
+			if (classInfo.getStartYear() != form.getStartYear()) {
+				
+				String startYearAfter = Integer.toString(form.getStartYear());
+				
+				updates.put("start_year", startYearAfter);
+				
+			}
+			
+			
+			if (!classInfo.getMajor().getName().equals(form.getMajorName()) ) {
+				
+				updates.put("major_name", form.getMajorName());
+				
+			}
+			
+			
+		}
+		
+		
+		if (updates.size() > 0) {
+			
+			classInfo = service.updateClass(classId, updates, loginId);
+			
+		}
+		
+		
+		
+
 		
 		// 該当教科登録処理
 		

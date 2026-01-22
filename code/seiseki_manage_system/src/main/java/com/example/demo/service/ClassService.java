@@ -10,7 +10,6 @@ import com.example.demo.model.entity.ClassEntity;
 import com.example.demo.model.entity.Major;
 import com.example.demo.model.entity.Manager;
 import com.example.demo.model.form.manager.ClassRegisterForm;
-import com.example.demo.model.form.manager.ClassSetForm;
 import com.example.demo.repository.ClassesRepository;
 import com.example.demo.repository.MajorsRepository;
 import com.example.demo.repository.ManagersRepository;
@@ -130,34 +129,6 @@ public class ClassService {
 	}
 	
 	
-	/* form入力情報、マネージャーid、専攻idから、, クラスidから、クラス更新
-	 * 
-	 * @param form フォーム入力情報
-	 * @param managerId 対象のマネージャーid
-	 * @param majorId 対象の専攻id
-	 * @param id 指定されたクラスid
-	 * @return クラスエンティティ1件
-	 * 
-	 */
-	
-	public ClassEntity setClass(ClassSetForm form, Integer managerId, Integer majorId, Integer id) {
-		
-		ClassEntity classInfo = repository.findById(id).orElse(null);
-		
-		classInfo.setStartYear(form.getStartYear());
-		
-		Manager managerInfo = managersRepository.findById(managerId).orElse(null);
-		
-		classInfo.setManager(managerInfo);
-		
-		Major majorInfo = majorsRepository.findById(majorId).orElse(null);
-		
-		classInfo.setMajor(majorInfo);
-		
-		return repository.save(classInfo);
-		
-		
-	}
 	
 	
 	/* idからクラスエンティティ1件を削除
