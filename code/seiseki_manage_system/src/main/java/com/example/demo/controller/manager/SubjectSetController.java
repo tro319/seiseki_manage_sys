@@ -1,6 +1,7 @@
 package com.example.demo.controller.manager;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import jakarta.servlet.http.HttpSession;
@@ -127,6 +128,46 @@ public class SubjectSetController {
 		session.removeAttribute("subject_set_id");
 		
 		Subject subjectInfo = service.getSubjectById(subjectId);
+		
+		String currentName = subjectInfo.getName();
+		
+		List<Subject> subjectsInfo = service.getSubjects();
+		
+		subjectsInfo = subjectsInfo.stream().filter(subject -> !subject.getName().equals(currentName)).toList();
+		
+		int doubleCount = 0;
+		
+		if (subjectsInfo != null) {
+			
+			for (Subject subject : subjectsInfo) {
+				
+				String subjectName = subject.getName();
+				
+				Boolean doubleCheck = service.checkDouble(subjectName);
+				
+				if (doubleCheck == true) {
+					
+					doubleCount += 1;
+					
+				}
+				
+				
+				
+				
+				
+			}
+			
+		}
+		
+		System.out.println(doubleCount);
+		
+		if (doubleCount > 0) {
+			
+			session.setAttribute("subject_set_result", "情報が重複しています");
+			
+			return "redirect:/manager/subject_update?id=" + subjectInfo.getId();
+			
+		}
 		
 		if (subjectInfo != null) {
 			

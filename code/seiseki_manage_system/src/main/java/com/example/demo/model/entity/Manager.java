@@ -41,7 +41,6 @@ public class Manager {
 	
 	private String pass;
 	
-	private String gender;
 	
 	
 // 参照先クラス未実装 (消さないで!)

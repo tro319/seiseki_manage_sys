@@ -1,6 +1,7 @@
 package com.example.demo.controller.manager;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import jakarta.servlet.http.HttpSession;
@@ -122,11 +123,54 @@ public class MajorSetController {
 		}
 		
 		
+
+		
+		
 		Integer majorId = (Integer)session.getAttribute("major_set_id");
 		
 		session.removeAttribute("major_set_id");
 		
 		Major majorInfo = service.getMajor(majorId);
+		
+		String currentName = majorInfo.getName();
+		
+		List<Major> majorsInfo = service.getMajors();
+		
+		majorsInfo = majorsInfo.stream().filter(major -> !major.getName().equals(currentName)).toList();
+		
+		int doubleCount = 0;
+		
+		if (majorsInfo != null) {
+			
+			for (Major major : majorsInfo) {
+				
+				String majorName = major.getName();
+				
+				Boolean doubleCheck = service.checkDouble(majorName);
+				
+				if (doubleCheck == true) {
+					
+					doubleCount += 1;
+					
+				}
+				
+				
+				
+				
+				
+			}
+			
+		}
+		
+		System.out.println(doubleCount);
+		
+		if (doubleCount > 0) {
+			
+			session.setAttribute("major_set_result", "情報が重複しています");
+			
+			return "redirect:/manager/major_update?id=" + majorInfo.getId();
+			
+		}
 		
 		if (majorInfo != null) {
 			
