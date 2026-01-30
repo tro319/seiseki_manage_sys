@@ -103,7 +103,6 @@ public class ClassSetController {
 			
 		}
 		
-		System.out.println(subjectsInfo);
 		
 		ClassSetForm setForm = new ClassSetForm();
 		
@@ -171,6 +170,8 @@ public class ClassSetController {
 		redirectAttributes.addFlashAttribute("major_all", majorAll);
 		
 		redirectAttributes.addFlashAttribute("subject_all", subjectAll);
+		
+		redirectAttributes.addFlashAttribute("class_set_id", classId);
 		
 		
 		
